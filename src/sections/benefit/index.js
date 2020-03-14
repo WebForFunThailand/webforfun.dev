@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Container, Heading, Center} from "../../common/components"
-import { colors, fonts } from "../../common/style"
+import { colors, fonts, media } from "../../common/style"
 
 const Section = styled.div`
   padding: 50px 0;
@@ -12,6 +12,11 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
+  
+  ${media.tablet`
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  `}
 `
 
 const CardContent = styled.div`
