@@ -59,6 +59,7 @@ const Close = styled.span`
 
 export default function(props) {
   const [isOpen, setIsOpen] = useState(false)
+  
   return (
     <div>
       <Image src={props.src} onClick={() => setIsOpen(!isOpen)} />
