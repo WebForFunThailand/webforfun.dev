@@ -7,10 +7,6 @@ import { colors, fonts } from "../../common/style"
 const Section = styled.div`
   padding: 50px 0;
 `
-const SectionCard = styled.div`
-  display: flex;
-  justify-content: center;
-`
 
 const Grid = styled.div`
   display: grid;
