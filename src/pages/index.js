@@ -7,6 +7,7 @@ import Navbar from "../common/navbar"
 
 import LandingSection from "../sections/landing"
 import AboutSection from "../sections/about"
+import BenefitSection from "../sections/benefit"
 
 const IndexPage = () => (
   <>
@@ -17,6 +18,7 @@ const IndexPage = () => (
 
     <LandingSection />
     <AboutSection />
+    <BenefitSection />
   </>
 )
 
