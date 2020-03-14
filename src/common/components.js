@@ -6,7 +6,7 @@ export const Container = styled.div`
   margin: auto auto;
   
   ${media.desktop`
-    width: 100%;
+    width: calc(100% - 15px * 2);
     margin: 0 15px;
   `}
 `

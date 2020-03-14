@@ -106,7 +106,7 @@ export default function() {
           <Anchor href="#">ติดต่อเรา</Anchor>
         </AnchorContainer>
         <div>
-          <LinkButton style={{marginRight: 30}} href="#" target="_blank">
+          <LinkButton href="#" target="_blank">
             สมัครกิจกรรม
           </LinkButton>
         </div>

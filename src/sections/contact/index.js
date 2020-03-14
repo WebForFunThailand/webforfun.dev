@@ -5,7 +5,7 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faFacebook, faFacebookMessenger } from "@fortawesome/free-brands-svg-icons"
 
 import { Anchor, Center, Container, Heading } from "../../common/components"
-import { colors, fonts } from "../../common/style"
+import { colors, fonts, media } from "../../common/style"
 
 const Section = styled.div`
   padding: 50px 0;
@@ -15,6 +15,16 @@ const Grid = styled.div`
   display: grid;
   grid-gap: 30px;
   grid-template-columns: 1fr 2fr;
+  
+  ${media.tablet`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    & > div:nth-child(1) {
+      margin-bottom: 30px; 
+    }
+  `}
 `
 
 const ContactList = styled.div`
@@ -33,6 +43,10 @@ const ContactList = styled.div`
 const WidthContainer = styled.div`
   width: 80%;
   margin: auto auto;
+  
+  ${media.tablet`
+    width: 100%;
+  `}
 `
 
 export default function() {
