@@ -21,7 +21,7 @@ const Logo = styled.img`
 
 const Content = styled.div`
   color: #555;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: ${fonts.header};
   margin-top: -20px;
   
