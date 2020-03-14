@@ -1,27 +1,45 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Container, Heading } from "../../common/components"
-import { colors, fonts } from "../../common/style"
+import { Center, Container, Heading } from "../../common/components"
+import { colors, fonts, media } from "../../common/style"
 
 const Section = styled.div`
   padding: 50px 0;
+  padding-top: 20px;
+  
+  overflow: hidden;
 `
 
 const About = styled.p`
   font-family: ${fonts.content};
   font-size: 1.2rem;
-  width: 60%;
   color: #555;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 30px;
   position: relative;
+  
+  width: 60%;
+  
+  ${media.tablet`
+    width: 80%;
+  `}
+  
+  ${media.phone`
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  `}
 `
 
 const Quote = styled.div`
   position: absolute;   
   color: ${colors.blue};
   font-size: 100px;
+  
+  ${media.phone`
+    display: none;
+  `}
 `
 const OpenQuote = styled(Quote)`
   top: -50px;
@@ -36,13 +54,15 @@ export default function() {
   return (
     <Section>
       <Container>
-        <Heading>Web For Fun คืออะไร?</Heading>
+        <Center>
+          <Heading color={colors.orange}>Web For Fun คืออะไร?</Heading>
+        </Center>
         <About>
           <OpenQuote>“</OpenQuote>
           <CloseQuote>”</CloseQuote>
-          <span>
+          <div>
           ค่าย Web For Fun เป็นค่าย 2 วัน 1 คืน สำหรับ Web Developer มือใหม่ ที่ต้องการสัมผัสประสบการณ์ Hackaton ที่ผู้เข้าร่วมจะต้องใช้ความร่วมมือ ร่วมใจกันสร้างผลงานเว็บไซต์ของตนเองตามไอเดียของแต่ละทีม
-          </span>
+          </div>
         </About>
       </Container>
     </Section>
