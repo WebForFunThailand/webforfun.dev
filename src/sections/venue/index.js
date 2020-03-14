@@ -41,6 +41,8 @@ export default function() {
         <Center>
           <Heading color={colors.blue}>สถานที่จัดงาน</Heading>
         </Center>
+        <br/>
+
         <Grid>
           <div>
             <div className="mapouter">

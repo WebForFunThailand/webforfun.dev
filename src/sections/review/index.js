@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-import { Container, Heading } from "../../common/components"
-import { colors, fonts } from "../../common/style"
+import { Center, Container, Heading } from "../../common/components"
+import { colors, fonts, media } from "../../common/style"
 
 const Section = styled.div`
   padding: 50px 0;
@@ -17,6 +17,11 @@ const Card = styled.div`
   
   & img {
     border-radius: 50%;
+    ${media.tablet`
+      width: 200px;
+      display: block;
+      margin: auto auto;
+    `}
   }
   
   & p {
@@ -24,6 +29,10 @@ const Card = styled.div`
     font-size: 1.2rem;
     font-family: ${fonts.content};
   }
+  
+  ${media.tablet`
+    grid-template-columns: 1fr;
+  `}
 `
 
 const Profile = styled.div`
@@ -34,6 +43,10 @@ const FlexRight = styled.div`
   display: flex;
   flex: 1;
   justify-content: flex-end;
+  
+  ${media.tablet`
+    justify-content: center;
+  `}
 `
 
 const Slider = styled.div`
@@ -49,6 +62,12 @@ const Slider = styled.div`
     display: flex;
     justify-content: center; 
     align-items: center;
+    
+    ${media.tablet`
+      width: 50px;
+      height: 50px;
+      font-size: 1.2rem;
+    `}
   }
   & > div:nth-child(1) {
     margin-right: 10px;
@@ -57,13 +76,19 @@ const Slider = styled.div`
     background: #f7f7f7;
     color: ${colors.red};
   }
+  
+  ${media.tablet`
+    margin-top: 20px;
+  `}
 `
 
 export default function() {
   return (
     <Section>
       <Container>
-        <Heading color={colors.blue}>ความรู้สึกของผู้เคยเข้าร่วมกิจกรรม</Heading>
+        <Center>
+          <Heading color={colors.blue}>ความรู้สึกของผู้เคยเข้าร่วมกิจกรรม</Heading>
+        </Center>
         <br/>
 
         <Card>
