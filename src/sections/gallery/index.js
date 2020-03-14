@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Container, Heading, Center} from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
 
-import Modal from './modal'
+import Modal from './Modal'
 
 const Section = styled.div`
   padding: 50px 0;
