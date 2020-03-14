@@ -10,6 +10,7 @@ const Section = styled.div`
 
 const About = styled.p`
   font-family: ${fonts.content};
+  font-size: 1.2rem;
   width: 60%;
   color: #555;
   margin: 0 auto;
