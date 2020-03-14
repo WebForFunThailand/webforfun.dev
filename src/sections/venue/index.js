@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Container, Heading } from "../../common/components"
-import { colors, fonts } from "../../common/style"
+import { Center, Container, Heading } from "../../common/components"
+import { colors, fonts, media } from "../../common/style"
 
 const Section = styled.div`
   padding: 50px 0;
@@ -12,6 +12,10 @@ const Grid = styled.div`
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
+  
+  ${media.tablet`
+    grid-template-columns: 1fr;
+  `}
 `
 
 const Card = styled.div`
@@ -34,7 +38,9 @@ export default function() {
   return (
     <Section>
       <Container>
-        <Heading color={colors.blue}>สถานที่จัดงาน</Heading>
+        <Center>
+          <Heading color={colors.blue}>สถานที่จัดงาน</Heading>
+        </Center>
         <Grid>
           <div>
             <div className="mapouter">
