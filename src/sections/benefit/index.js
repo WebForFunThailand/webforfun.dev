@@ -53,11 +53,7 @@ export default function() {
         <Grid>
           <CardContent>
             <Center>
-              <img
-                width="200px"
-                height="200px"
-                src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-childrens-day-cute-illustration-childrens-day-decoration-mountain-grass-png-image_3816991.jpg"
-              ></img>
+              <img width="200px" height="200px" src={CodingImage}></img>
             </Center>
             <Center>
               <Heading color={colors.orange}>Coding</Heading>
@@ -69,60 +65,14 @@ export default function() {
           </CardContent>
           <CardContent>
             <Center>
-              <img
-                width="200px"
-                height="200px"
-                src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-childrens-day-cute-illustration-childrens-day-decoration-mountain-grass-png-image_3816991.jpg"
-              ></img>
-            </Center>
-            <Center>
-              <Heading color={colors.blue}>Learning</Heading>
-            </Center>
-            <Content>
-              ภายในงานมีการจัด Workshop ต่าง ๆ ให้ความรู้ด้าน Coding และมีพี่ ๆ
-              Staff ให้ความช่วยเหลือ ทุกคนได้ความรู้กลับไปนอนกอดที่บ้านแน่นอน!
-            </Content>
-          </CardContent>
-          <CardContent>
-            <Center>
-              <img
-                width="200px"
-                height="200px"
-                src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-childrens-day-cute-illustration-childrens-day-decoration-mountain-grass-png-image_3816991.jpg"
-              ></img>
-            </Center>
-            <Center>
-              <Heading color={colors.red}>Meeting</Heading>
-            </Center>
-            <Content>
-              พบปะกับเพื่อนร่วมทีมและคนอื่น ๆ ที่ร่วมกิจกรรมภายในงาน
-              รวมไปถึงเหล่า Staff ผู้มากฝีมือและเหล่า Developer ผู้เชี่ยวชาญ
-            </Content>
-          </CardContent>
-        </Grid>
-        <Grid>
-          <CardContent>
-            <Center>
-              <img width="200px" height="200px" src={CodingImage}></img>
-            </Center>
-            <Center>
-              <Heading color={colors.orange}>Coding</Heading>
-            </Center>
-            <Content>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </Content>
-          </CardContent>
-          <CardContent>
-            <Center>
               <img width="200px" height="200px" src={LearningImage}></img>
             </Center>
             <Center>
               <Heading color={colors.blue}>Learning</Heading>
             </Center>
             <Content>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+              ภายในงานมีการจัด Workshop ต่าง ๆ ให้ความรู้ด้าน Coding และมีพี่ ๆ
+              Staff ประจำทีมคอยให้ความช่วยเหลือ เพื่อให้มั่นใจว่าทุกคนได้ความรู้กลับไปนอนกอดที่บ้านแน่นอน!
             </Content>
           </CardContent>
           <CardContent>
@@ -133,8 +83,8 @@ export default function() {
               <Heading color={colors.red}>Meeting</Heading>
             </Center>
             <Content>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+              พบปะกับเพื่อนร่วมทีมและคนอื่น ๆ ที่ร่วมกิจกรรมภายในงาน
+              รวมไปถึงเหล่า Staff ผู้มากฝีมือและเหล่า Developer ผู้เชี่ยวชาญ
             </Content>
           </CardContent>
         </Grid>

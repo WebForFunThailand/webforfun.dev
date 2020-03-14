@@ -19,7 +19,7 @@ export const Heading = styled.h1`
 `
 
 export const Center = styled.div`
-  display: flex;
+  display: grid;
   justify-content: center;
 `
 
