@@ -6,7 +6,7 @@ import { Center, Heading, LinkButton } from "../../common/components"
 import { fonts, media } from "../../common/style"
 
 const Section = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   
   display: flex;
   align-items: center;
@@ -15,6 +15,7 @@ const Section = styled.div`
 
 const Logo = styled.img`
   width: 200px;
+  height: 259px;
   margin-top: 50px;
   margin-bottom: 10px;
 `
