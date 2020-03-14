@@ -8,15 +8,6 @@ const Section = styled.div`
   padding: 50px 0;
 `
 
-const About = styled.p`
-  font-family: ${fonts.content};
-  width: 60%;
-  color: #555;
-  margin: 0 auto;
-  margin-top: 60px;
-  position: relative;
-`
-
 const Grid = styled.div`
   display: grid;
   grid-gap: 30px;
