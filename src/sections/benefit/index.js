@@ -76,8 +76,8 @@ export default function() {
               <Heading color={colors.blue}>Learning</Heading>
             </Center>
             <Content>
-              ภายในงานมีการจัด Workshop ให้ความรู้ด้าน Coding
-              ได้ความรู้กลับไปนอนกอดที่บ้านแน่นอน!
+              ภายในงานมีการจัด Workshop ต่าง ๆ ให้ความรู้ด้าน Coding และมีพี่ ๆ
+              Staff ให้ความช่วยเหลือ ทุกคนได้ความรู้กลับไปนอนกอดที่บ้านแน่นอน!
             </Content>
           </CardContent>
           <CardContent>
