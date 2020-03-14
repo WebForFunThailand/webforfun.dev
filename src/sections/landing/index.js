@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+
+import WebForFunLogo from "../../images/logo.png"
 import { Center, Heading, LinkButton } from "../../common/components"
 import { fonts } from "../../common/style"
 
@@ -29,7 +31,7 @@ export default function() {
     <Section>
       <div>
         <Center>
-          <Logo src="./images/logo.png" />
+          <Logo src={WebForFunLogo} />
         </Center>
 
         <Center>

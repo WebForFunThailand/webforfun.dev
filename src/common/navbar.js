@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+
+import WebForFunLogo from "../images/logo.png"
 import { Anchor, Container, LinkButton } from "./components"
 
 const NavContainer = styled.div`
@@ -40,7 +42,7 @@ export default function() {
       <FlexContainer>
         <AnchorContainer>
           <div>
-            <Logo src="./images/logo.png" />
+            <Logo src={WebForFunLogo} />
           </div>
           <Anchor href="#">รายละเอียดงาน</Anchor>
           <Anchor href="#">สถานที่จัดงาน</Anchor>
