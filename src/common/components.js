@@ -6,6 +6,13 @@ export const Container = styled.div`
   margin: auto auto;
 `
 
+export const Heading = styled.h1`
+  color: ${colors.red};
+  font-family: ${fonts.header}; 
+  font-size: 1.8rem;
+  font-weight: 500;
+`
+
 export const Anchor = styled.a`
   font-family: ${fonts.header};
   color: #555;

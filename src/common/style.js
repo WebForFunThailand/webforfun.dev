@@ -3,7 +3,7 @@ import {createGlobalStyle, css} from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap&subset=thai');
   
   @font-face {
     font-family: HijoPutaPeligroso;

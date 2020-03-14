@@ -4,7 +4,9 @@ import {GlobalStyle} from "../common/style"
 
 import SEO from "../common/seo"
 import Navbar from "../common/navbar"
+
 import LandingSection from "../sections/landing"
+import AboutSection from "../sections/about"
 
 const IndexPage = () => (
   <>
@@ -14,6 +16,7 @@ const IndexPage = () => (
     <Navbar />
 
     <LandingSection />
+    <AboutSection />
   </>
 )
 
