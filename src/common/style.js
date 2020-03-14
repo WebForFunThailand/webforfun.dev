@@ -1,5 +1,5 @@
 // fonts, colors, styled-component helper function
-import styled, {createGlobalStyle, css} from "styled-components"
+import {createGlobalStyle, css} from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
@@ -13,16 +13,16 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-size: 16px;
-    font-family: 'HijoPutaPeligroso',sans-serif;
+    font-family: sans-serif;
   } 
   * {
     box-sizing: border-box;
   } 
 `
 
-export const font = {
-  header: "'Sarabun', sans-serif",
-  content: "'Kanit', sans-serif",
+export const fonts = {
+  content: "'Sarabun', sans-serif",
+  header: "'Kanit', sans-serif",
   logo: "'HijoPutaPeligroso', sans-serif",
 };
 
