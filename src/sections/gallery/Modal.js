@@ -2,12 +2,12 @@ import React, {useState} from "react"
 import styled from "styled-components"
 
 import { Container, Heading } from "../../common/components"
-import { colors, fonts } from "../../common/style"
+import { colors, fonts, media } from "../../common/style"
 
 const ModalBox = styled.div`
     display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 99999999; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -35,7 +35,6 @@ const Image = styled.img`
     border-radius: 5px;
     transition: 0.3s;
     width: 100%;
-    height: 200px;
     src: ${props => props.src};
     display: none;
 
@@ -47,7 +46,7 @@ const Image = styled.img`
 
 const Close = styled.span`
     position: absolute;
-    top: 10%;
+    top: 35px;
     right: 35px;
     color: #f1f1f1;
     font-size: 40px;

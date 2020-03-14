@@ -15,8 +15,12 @@ const Grid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 
-  ${media.desktop`
+  ${media.tablet`
     grid-template-columns: repeat(2, 1fr);
+  `}
+  
+  ${media.phone`
+    grid-template-columns: 1fr;
   `}
 `
 
