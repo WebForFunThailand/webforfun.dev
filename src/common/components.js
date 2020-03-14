@@ -7,7 +7,7 @@ export const Container = styled.div`
 `
 
 export const Heading = styled.h1`
-  color: ${colors.red};
+  color: ${props => props.color ? props.color : colors.red};
   font-family: ${fonts.header}; 
   font-size: 1.8rem;
   font-weight: 500;
