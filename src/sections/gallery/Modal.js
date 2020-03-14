@@ -63,7 +63,7 @@ const Close = styled.span`
 export default function(props) {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div>  
+        <div style={{cursor: "pointer"}}>
             <Image src={props.src} onClick={() => setIsOpen(!isOpen)}/>
             {isOpen && 
                 <ModalBox id="myModal">
