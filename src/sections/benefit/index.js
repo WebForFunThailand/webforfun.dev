@@ -1,6 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
+import CodingImage from "../../images/coding.png"
+import LearningImage from "../../images/learning.png"
+import MeetingImage from "../../images/meeting.png"
 import { Container, Heading, Center} from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
 
@@ -50,7 +53,7 @@ export default function() {
       <Grid>
         <CardContent>
           <Center>
-            <img width="200px" height="200px" src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-childrens-day-cute-illustration-childrens-day-decoration-mountain-grass-png-image_3816991.jpg'></img>
+            <img width="200px" height="200px" src={CodingImage}></img>
           </Center>
           <Center>
             <Heading color={colors.orange} >Coding</Heading>
@@ -59,16 +62,16 @@ export default function() {
         </CardContent>
         <CardContent>
           <Center>
-            <img width="200px" height="200px" src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-childrens-day-cute-illustration-childrens-day-decoration-mountain-grass-png-image_3816991.jpg'></img>
+            <img width="200px" height="200px" src={LearningImage}></img>
           </Center>
           <Center>
-            <Heading color={colors.blue}>Learing</Heading>
+            <Heading color={colors.blue}>Learning</Heading>
           </Center>
           <Content>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Content>
         </CardContent>
         <CardContent>
           <Center>
-            <img width="200px" height="200px" src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-childrens-day-cute-illustration-childrens-day-decoration-mountain-grass-png-image_3816991.jpg'></img>
+            <img width="200px" height="200px" src={MeetingImage}></img>
           </Center>
           <Center>
             <Heading color={colors.red}>Meeting</Heading>
