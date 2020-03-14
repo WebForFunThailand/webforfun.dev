@@ -7,6 +7,7 @@ const NavContainer = styled.div`
   background: white;
   position: fixed;
   width: 100%;
+  z-index: 99999;
   
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
