@@ -13,7 +13,7 @@ const Section = styled.div`
 export default function() {
   return (
     <Section>
-      Benefit Section
+      Benefits Section
     </Section>
   )
 }
