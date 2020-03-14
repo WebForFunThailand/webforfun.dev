@@ -28,15 +28,13 @@ const ModalContent = styled.img`
     animation-name: zoom;
     animation-duration: 0.6s;
 
-    src: ${props => props.src};
+
 `
 
 const Image = styled.img`
     border-radius: 5px;
     transition: 0.3s;
     width: 100%;
-    src: ${props => props.src};
-    display: none;
 
     :hover {
         opacity: 0.7;
@@ -66,9 +64,9 @@ export default function(props) {
         <div>  
             <Image src={props.src} onClick={() => setIsOpen(!isOpen)}/>
             {isOpen && 
-                <ModalBox id="myModal">
+                <ModalBox>
                     <Close onClick={() => setIsOpen(!isOpen)}>&times;</Close>
-                    <ModalContent id="img01" src={props.src}/>
+                    <ModalContent src={props.src}/>
                 </ModalBox>
             }
         </div>
