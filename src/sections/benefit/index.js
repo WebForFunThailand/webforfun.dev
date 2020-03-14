@@ -1,6 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
+import CodingImage from "../../images/coding.png"
+import LearningImage from "../../images/learning.png"
+import MeetingImage from "../../images/meeting.png"
 import { Container, Heading, Center } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
 
@@ -94,6 +97,44 @@ export default function() {
             <Content>
               พบปะกับเพื่อนร่วมทีมและคนอื่น ๆ ที่ร่วมกิจกรรมภายในงาน
               รวมไปถึงเหล่า Staff ผู้มากฝีมือและเหล่า Developer ผู้เชี่ยวชาญ
+            </Content>
+          </CardContent>
+        </Grid>
+        <Grid>
+          <CardContent>
+            <Center>
+              <img width="200px" height="200px" src={CodingImage}></img>
+            </Center>
+            <Center>
+              <Heading color={colors.orange}>Coding</Heading>
+            </Center>
+            <Content>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </Content>
+          </CardContent>
+          <CardContent>
+            <Center>
+              <img width="200px" height="200px" src={LearningImage}></img>
+            </Center>
+            <Center>
+              <Heading color={colors.blue}>Learning</Heading>
+            </Center>
+            <Content>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </Content>
+          </CardContent>
+          <CardContent>
+            <Center>
+              <img width="200px" height="200px" src={MeetingImage}></img>
+            </Center>
+            <Center>
+              <Heading color={colors.red}>Meeting</Heading>
+            </Center>
+            <Content>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
             </Content>
           </CardContent>
         </Grid>

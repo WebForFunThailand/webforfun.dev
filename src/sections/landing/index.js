@@ -48,7 +48,7 @@ export default function() {
         <br/>
         <br/>
         <Center>
-          <LinkButton big href="#" target="_blank">สมัครเข้าร่วมกิจกรรม</LinkButton>
+          <LinkButton big href="https://forms.gle/bMLeKDbDTNdGr6ry9" target="_blank">สมัครเข้าร่วมกิจกรรม</LinkButton>
         </Center>
       </div>
     </Section>

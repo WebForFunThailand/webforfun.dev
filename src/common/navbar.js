@@ -131,7 +131,7 @@ export default function() {
           </Link>
         </AnchorContainer>
         <div>
-          <LinkButton href="#" target="_blank">
+          <LinkButton href="https://forms.gle/bMLeKDbDTNdGr6ry9" target="_blank">
             สมัครกิจกรรม
           </LinkButton>
         </div>
