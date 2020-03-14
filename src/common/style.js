@@ -2,10 +2,18 @@
 import styled, {createGlobalStyle, css} from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+  
+  @font-face {
+    font-family: HijoPutaPeligroso;
+    src: url("./fonts/HijoPutaPeligroso.otf") format("opentype");
+  }
+  
   body {
     margin: 0;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: 'HijoPutaPeligroso',sans-serif;
   } 
   * {
     box-sizing: border-box;
@@ -13,13 +21,18 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const font = {
+  header: "'Sarabun', sans-serif",
+  content: "'Kanit', sans-serif",
+  logo: "'HijoPutaPeligroso', sans-serif",
 };
 
 export const colors = {
+  red: "#ee1365",
+  blue: "#0f68f7",
+  orange: "#f67d03",
 };
 
 // helper function
-
 const sizes = {
   giant: 1440,
   desktop: 1200,
