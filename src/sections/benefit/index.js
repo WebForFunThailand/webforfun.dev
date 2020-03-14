@@ -73,7 +73,7 @@ export default function() {
               ></img>
             </Center>
             <Center>
-              <Heading color={colors.blue}>Learing</Heading>
+              <Heading color={colors.blue}>Learning</Heading>
             </Center>
             <Content>
               ภายในงานมีการจัด Workshop ให้ความรู้ด้าน Coding
