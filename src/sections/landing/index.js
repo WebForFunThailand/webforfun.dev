@@ -6,7 +6,7 @@ import { Center, Heading, LinkButton } from "../../common/components"
 import { fonts, media } from "../../common/style"
 
 const Section = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   
   display: flex;
   align-items: center;
@@ -15,13 +15,14 @@ const Section = styled.div`
 
 const Logo = styled.img`
   width: 200px;
+  height: 259px;
   margin-top: 50px;
   margin-bottom: 10px;
 `
 
 const Content = styled.div`
   color: #555;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: ${fonts.header};
   margin-top: -20px;
   
@@ -48,7 +49,7 @@ export default function() {
         <br/>
         <br/>
         <Center>
-          <LinkButton big href="#" target="_blank">สมัครเข้าร่วมกิจกรรม</LinkButton>
+          <LinkButton big href="https://forms.gle/bMLeKDbDTNdGr6ry9" target="_blank">สมัครเข้าร่วมกิจกรรม</LinkButton>
         </Center>
       </div>
     </Section>

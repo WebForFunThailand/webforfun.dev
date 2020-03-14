@@ -36,7 +36,7 @@ export default function() {
         <br/>
         <br/>
         <Center>
-          <LinkButton big href="#" target="_blank">ร่วมเป็นผู้สนับสนุนค่าย</LinkButton>
+          <LinkButton big href="https://docs.google.com/document/d/1G4FotxHMOKJmDVxnIU6Mmak8WHSUSAdWoEuwAC63_V4/edit?usp=sharing" target="_blank">ร่วมเป็นผู้สนับสนุนกิจกรรม</LinkButton>
         </Center>
       </Container>
     </Section>

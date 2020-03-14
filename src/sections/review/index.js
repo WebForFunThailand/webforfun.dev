@@ -1,8 +1,9 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
+import reviews from "./reviews"
 import { Center, Container, Heading } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
 
@@ -82,7 +83,23 @@ const Slider = styled.div`
   `}
 `
 
+function useSlide(maxValue, defaultValue) {
+  const [counter, setCounter] = useState(defaultValue);
+
+  function increment() {
+    setCounter((counter + 1) % maxValue);
+  }
+
+  function decrement() {
+    setCounter((counter + (maxValue - 1)) % maxValue);
+  }
+
+  return [counter, increment, decrement];
+}
+
 export default function() {
+  const [counter, increment, decrement] = useSlide(reviews.length, 0);
+
   return (
     <Section>
       <Container>
@@ -93,20 +110,20 @@ export default function() {
 
         <Card>
           <div>
-            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/69455470_1281964135311273_1355291769364807680_o.jpg?_nc_cat=106&_nc_sid=85a577&_nc_ohc=lxsvvB3i7K8AX91G1kw&_nc_ht=scontent-sin6-1.xx&oh=b831c4d645bfcf38aa736975067fe6dd&oe=5E93DBEA" width="100%"/>
+            <img src={reviews[counter].profile} width="100%"/>
           </div>
           <div>
-            <p>“ที่ได้ไปงานมาปีที่แล้ว บรรยากาศงานเป็นกันเองมากๆครับ จะไปกลุ่มหรือไปเดี่ยวก็ไม่ต้องกลัวเหงาเพราะจะได้เจอเพื่อนๆใหม่ๆ แลกเปลี่ยนประสบการณ์กัน แชร์ไอเดียกัน หรือถ้าไม่มีไอเดียก็ไปคิดที่งานทางทีมงานก็มีคำแนะนำให้ด้วยว่าหาไอเดียยังไงดดีเริ่มจากตรงไหน แถมยังมีการเปิด session สอนในเรื่องที่มีคนอยากรู้หรืออยากสอนด้วยทำให้เราได้เรียนรู้อะไรอีกเยอะเลย สุดท้าย สถานที่จัดงานดี อาหารอร่อย ทีมงานดี เพื่อนร่วมงานดี แนะนำมากๆครับ 😀”</p>
-            <Profile>รีวิวโดย Chun Rapeepat</Profile>
+            <p>“{reviews[counter].detail}”</p>
+            <Profile>รีวิวโดย {reviews[counter].reviewer}</Profile>
           </div>
         </Card>
 
         <FlexRight>
           <Slider>
-            <div>
+            <div onClick={decrement}>
               <FontAwesomeIcon icon={faArrowLeft} />
             </div>
-            <div>
+            <div onClick={increment}>
               <FontAwesomeIcon icon={faArrowRight} />
             </div>
           </Slider>

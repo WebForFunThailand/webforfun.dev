@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import styled from "styled-components"
+import {Link} from "react-scroll"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -29,7 +30,7 @@ const AnchorContainer = styled.div`
   display: flex;
   align-items: center;
   
-  & > ${Anchor} {
+  & ${Anchor} {
     margin: 0 15px;
   }
   
@@ -82,12 +83,24 @@ export default function() {
     <NavContainer>
       <Dropdown style={{display: isOpen ? "flex" : "none"}}>
         <div>
-          <Anchor href="#">รายละเอียดงาน</Anchor>
-          <Anchor href="#">สถานที่จัดงาน</Anchor>
-          <Anchor href="#">บรรยากาศปีที่ผ่านมา</Anchor>
-          <Anchor href="#">FAQ</Anchor>
-          <Anchor href="#">ผู้สนับสนุน</Anchor>
-          <Anchor href="#">ติดต่อเรา</Anchor>
+          <Link onClick={() => setIsOpen(false)} to="about" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">รายละเอียดงาน</Anchor>
+          </Link>
+          <Link onClick={() => setIsOpen(false)} to="venue" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">สถานที่จัดงาน</Anchor>
+          </Link>
+          <Link onClick={() => setIsOpen(false)} to="gallery" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">บรรยากาศปีที่ผ่านมา</Anchor>
+          </Link>
+          <Link onClick={() => setIsOpen(false)} to="faq" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">FAQ</Anchor>
+          </Link>
+          <Link onClick={() => setIsOpen(false)} to="sponsor" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">ผู้สนับสนุน</Anchor>
+          </Link>
+          <Link onClick={() => setIsOpen(false)} to="contact" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">ติดต่อเรา</Anchor>
+          </Link>
         </div>
       </Dropdown>
       <FlexContainer>
@@ -96,17 +109,29 @@ export default function() {
         </Hamburger>
         <AnchorContainer>
           <div>
-            <Logo src={WebForFunLogo} />
+              <Logo src={WebForFunLogo} />
           </div>
-          <Anchor href="#">รายละเอียดงาน</Anchor>
-          <Anchor href="#">สถานที่จัดงาน</Anchor>
-          <Anchor href="#">บรรยากาศปีที่ผ่านมา</Anchor>
-          <Anchor href="#">FAQ</Anchor>
-          <Anchor href="#">ผู้สนับสนุน</Anchor>
-          <Anchor href="#">ติดต่อเรา</Anchor>
+          <Link to="about" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">รายละเอียดงาน</Anchor>
+          </Link>
+          <Link to="venue" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">สถานที่จัดงาน</Anchor>
+          </Link>
+          <Link to="gallery" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">บรรยากาศปีที่ผ่านมา</Anchor>
+          </Link>
+          <Link to="faq" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">FAQ</Anchor>
+          </Link>
+          <Link to="sponsor" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">ผู้สนับสนุน</Anchor>
+          </Link>
+          <Link to="contact" spy={true} smooth={true} duration={500} offset={-80}>
+            <Anchor href="#">ติดต่อเรา</Anchor>
+          </Link>
         </AnchorContainer>
         <div>
-          <LinkButton href="#" target="_blank">
+          <LinkButton href="https://forms.gle/bMLeKDbDTNdGr6ry9" target="_blank">
             สมัครกิจกรรม
           </LinkButton>
         </div>

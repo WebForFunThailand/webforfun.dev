@@ -24,14 +24,26 @@ const IndexPage = () => (
     <Navbar />
 
     <LandingSection />
-    <AboutSection />
-    <BenefitSection />
-    <VenueSection />
-    <GallerySection />
-    <ReviewSection />
-    <FAQSection />
-    <SponsorSection />
-    <ContactSection />
+    <div id="about" name="about">
+        <AboutSection />
+        <BenefitSection />
+    </div>
+    <div id="venue" name="venue">
+        <VenueSection />
+    </div>
+    <div id="gallery" name="gallery">
+        <GallerySection />
+        <ReviewSection />
+    </div>
+    <div id="faq" name="faq">
+        <FAQSection />
+    </div>
+    <div id="sponsor" name="sponsor">
+        <SponsorSection />
+    </div>
+    <div id="contact" name="contact">
+        <ContactSection />
+    </div>
 
     <Footer />
   </>
