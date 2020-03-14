@@ -9,6 +9,7 @@ import LandingSection from "../sections/landing"
 import AboutSection from "../sections/about"
 import BenefitSection from "../sections/benefit"
 import VenueSection from "../sections/venue"
+import GallerySection from "../sections/gallery"
 
 const IndexPage = () => (
   <>
@@ -21,6 +22,7 @@ const IndexPage = () => (
     <AboutSection />
     <BenefitSection />
     <VenueSection />
+    <GallerySection />
   </>
 )
 
