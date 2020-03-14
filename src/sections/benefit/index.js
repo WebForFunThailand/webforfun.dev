@@ -15,7 +15,11 @@ const Grid = styled.div`
   
   ${media.tablet`
     grid-template-columns: 1fr;
-    grid-gap: 15px;
+    grid-gap: 20px;
+    
+    & > div {
+      margin: auto auto;
+    }
   `}
 `
 
@@ -24,6 +28,8 @@ const CardContent = styled.div`
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 48px 24px;
+  
+  max-width: 350px;
 `
 
 const Content = styled.p`
