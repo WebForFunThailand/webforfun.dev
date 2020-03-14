@@ -68,7 +68,16 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css?family=Kanit&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Sarabun&display=swap&subset=thai"
+        rel="stylesheet"
+      />
+    </Helmet>
   )
 }
 

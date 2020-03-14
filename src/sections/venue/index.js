@@ -12,15 +12,15 @@ const Grid = styled.div`
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
-  
+
   ${media.tablet`
     grid-template-columns: 1fr;
   `}
 `
 
 const Card = styled.div`
-   margin-bottom: 40px;
-    
+  margin-bottom: 40px;
+
   & > h2 {
     font-family: ${fonts.header};
     margin: 0;
@@ -41,13 +41,22 @@ export default function() {
         <Center>
           <Heading color={colors.blue}>สถานที่จัดงาน</Heading>
         </Center>
-        <br/>
+        <br />
 
         <Grid>
           <div>
             <div className="mapouter">
               <div className="gmap_canvas">
-                <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=clazy%20cafe&t=&z=17&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"/>
+                <iframe
+                  width="100%"
+                  height="500"
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=clazy%20cafe&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  frameBorder="0"
+                  scrolling="no"
+                  marginHeight="0"
+                  marginWidth="0"
+                />
               </div>
             </div>
           </div>
@@ -55,10 +64,11 @@ export default function() {
             <Card>
               <h2>สถานที่จัดกิจกรรม</h2>
               <p>
-                Clazy Cafe, 899 Phahonyothin Rd, Khwaeng Samsen Nai, Phaya Thai, Bangkok 10400
+                Clazy Cafe, 899 Phahonyothin Rd, Khwaeng Samsen Nai, Phaya Thai,
+                Bangkok 10400
               </p>
             </Card>
-            <Card>
+            {/* <Card>
               <h2>การเดินทางด้วย BTS</h2>
               <p>
                 Clazy Cafe, 899 Phahonyothin Rd, Khwaeng Samsen Nai, Phaya Thai, Bangkok 10400
@@ -69,7 +79,7 @@ export default function() {
               <p>
                 Clazy Cafe, 899 Phahonyothin Rd, Khwaeng Samsen Nai, Phaya Thai, Bangkok 10400
               </p>
-            </Card>
+            </Card> */}
           </div>
         </Grid>
       </Container>
