@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import { Center, Container, Heading } from "../../common/components"
-import { colors, fonts } from "../../common/style"
+import { colors, fonts, media } from "../../common/style"
 
 const Section = styled.div`
   padding: 50px 0;
@@ -26,6 +26,12 @@ const FAQContainer = styled.div`
   & h2 div {
     position: absolute;
     right: 0;
+    
+    ${media.tablet`
+      position: relative;
+      display: inline-block;
+      margin-right: 15px;
+    `}
   }
   & p {
     color: #555;
