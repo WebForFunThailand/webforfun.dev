@@ -51,7 +51,7 @@ export default function() {
         </AnchorContainer>
         <div>
           <LinkButton href="#" target="_blank">
-            สมัครค่าย
+            สมัครกิจกรรม
           </LinkButton>
         </div>
       </FlexContainer>

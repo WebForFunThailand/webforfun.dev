@@ -13,6 +13,11 @@ export const Heading = styled.h1`
   font-weight: 500;
 `
 
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 export const Anchor = styled.a`
   font-family: ${fonts.header};
   color: #555;
@@ -32,6 +37,8 @@ export const LinkButton = styled.a`
   padding: 7px 20px;
   cursor: pointer;
   display: inline-block;
+  
+  font-size: ${props => props.big ? "1.2rem" : "1rem"};
   
   color: white;
   text-decoration: none;
