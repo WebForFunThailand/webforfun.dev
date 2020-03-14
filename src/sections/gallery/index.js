@@ -3,8 +3,16 @@ import styled from "styled-components"
 
 import { Container, Heading, Center} from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
+import image1 from "../../images/IMG_3858.jpg"
+import image2 from "../../images/IMG_3879.jpg"
+import image3 from "../../images/IMG_3890.jpg"
+import image4 from "../../images/IMG_3905.jpg"
+import image5 from "../../images/IMG_3916.jpg"
+import image6 from "../../images/IMG_3921.jpg"
+import image7 from "../../images/IMG_3931.jpg"
+import image8 from "../../images/IMG_3971.jpg"
 
-import Modal from './Modal'
+import Modal from "./Modal"
 
 const Section = styled.div`
   padding: 50px 0;
@@ -34,14 +42,14 @@ export default function() {
         <br/>
 
         <Grid>
-          <Modal src="https://r-cf.bstatic.com/images/hotel/max1024x768/116/116281465.jpg"/>      
-          <Modal src="https://cdn.pixabay.com/photo/2018/12/21/14/26/view-3887981_960_720.jpg"/>      
-          <Modal src="https://image.shutterstock.com/image-photo/view-sea-houses-on-hillsides-600w-785350507.jpg"/>      
-          <Modal src="https://pix10.agoda.net/hotelImages/443/443651/443651_16090818170046261601.jpg?s=1024x768"/>      
-          <Modal src="https://www.tripgether.com/photos/shares/Pasu/5%20Mae%20salong/1015.jpg"/>      
-          <Modal src="https://articlekey.com/wp-content/uploads/2018/01/1.jpg"/>      
-          <Modal src="https://www.wangnokkaew.com/img/slide_new%20(2).jpg"/>      
-          <Modal src="https://www.chillpainai.com/src/wewakeup/chillwriter/uploads/2016-09-20%2015:08:46_Goodview12.jpg"/>      
+          <Modal src={image1}/>    
+          <Modal src={image2}/>    
+          <Modal src={image3}/>    
+          <Modal src={image4}/>    
+          <Modal src={image5}/>    
+          <Modal src={image6}/>    
+          <Modal src={image7}/>    
+          <Modal src={image8}/>   
         </Grid>
         <br/>
       </Container>
