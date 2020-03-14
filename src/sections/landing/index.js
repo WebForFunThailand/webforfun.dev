@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import WebForFunLogo from "../../images/logo.png"
 import { Center, Heading, LinkButton } from "../../common/components"
-import { fonts } from "../../common/style"
+import { fonts, media } from "../../common/style"
 
 const Section = styled.div`
   height: 100vh;
@@ -24,6 +24,10 @@ const Content = styled.div`
   font-size: 1.6rem;
   font-family: ${fonts.header};
   margin-top: -20px;
+  
+  ${media.phone`
+    font-size: 1.2rem;
+  `}
 `
 
 export default function() {
