@@ -1,9 +1,14 @@
 import styled from "styled-components"
-import { colors, fonts } from "./style"
+import { colors, fonts, media } from "./style"
 
 export const Container = styled.div`
   width: 1100px;
   margin: auto auto;
+  
+  ${media.desktop`
+    width: 100%;
+    margin: 0 15px;
+  `}
 `
 
 export const Heading = styled.h1`

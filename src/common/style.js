@@ -36,7 +36,7 @@ export const colors = {
 const sizes = {
   giant: 1440,
   desktop: 1200,
-  tablet: 768,
+  tablet: 900,
   phone: 480,
 };
 
