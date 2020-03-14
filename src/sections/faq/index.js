@@ -15,7 +15,7 @@ const FAQContainer = styled.div`
   padding: 5px 20px;
   
   & h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: normal;
     font-family: ${fonts.header};
     cursor: pointer;

@@ -38,6 +38,7 @@ const CardContent = styled.div`
 const Content = styled.p`
   font-family: ${fonts.content};
   text-align: center;
+  color: #555;
   margin: 0;
 `
 
