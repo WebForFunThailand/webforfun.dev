@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Anchor = styled.a`
   font-family: ${fonts.header};
-  color: #333;
+  color: #555;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;

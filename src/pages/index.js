@@ -1,10 +1,10 @@
 import React from "react"
 
-import {Container} from "../common/components"
 import {GlobalStyle} from "../common/style"
 
 import SEO from "../common/seo"
 import Navbar from "../common/navbar"
+import LandingSection from "../sections/landing"
 
 const IndexPage = () => (
   <>
@@ -13,9 +13,7 @@ const IndexPage = () => (
 
     <Navbar />
 
-    <Container>
-      Testing
-    </Container>
+    <LandingSection />
   </>
 )
 
