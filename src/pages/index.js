@@ -12,6 +12,7 @@ import VenueSection from "../sections/venue"
 import GallerySection from "../sections/gallery"
 import ReviewSection from "../sections/review"
 import FAQSection from "../sections/faq"
+import SponsorSection from "../sections/sponsor"
 
 const IndexPage = () => (
   <>
@@ -27,6 +28,7 @@ const IndexPage = () => (
     <GallerySection />
     <ReviewSection />
     <FAQSection />
+    <SponsorSection />
   </>
 )
 
