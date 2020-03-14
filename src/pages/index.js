@@ -4,6 +4,7 @@ import {GlobalStyle} from "../common/style"
 
 import SEO from "../common/seo"
 import Navbar from "../common/navbar"
+import Footer from "../common/footer"
 
 import LandingSection from "../sections/landing"
 import AboutSection from "../sections/about"
@@ -31,6 +32,8 @@ const IndexPage = () => (
     <FAQSection />
     <SponsorSection />
     <ContactSection />
+
+    <Footer />
   </>
 )
 
