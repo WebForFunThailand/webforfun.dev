@@ -5,6 +5,25 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import OGImage from "../images/og-image.jpeg"
 
+const FacebookPixelCode = `
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '200512364567193');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=200512364567193&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->`
+
 function SEO({ description, lang, meta }) {
   const { site } = useStaticQuery(
     graphql`
@@ -75,6 +94,7 @@ function SEO({ description, lang, meta }) {
         href="https://fonts.googleapis.com/css?family=Sarabun&display=swap&subset=thai"
         rel="stylesheet"
       />
+      <div dangerouslySetInnerHTML={{ __html: FacebookPixelCode}} />
     </Helmet>
   )
 }
