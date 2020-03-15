@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import WebForFunLogo from "../../images/logo.png"
-import { Center, Heading, LinkButton } from "../../common/components"
+import { Center, Heading, LinkButton, P } from "../../common/components"
 import { fonts, media } from "../../common/style"
 
 const Section = styled.div`
@@ -50,6 +50,10 @@ export default function() {
         <br/>
         <Center>
           <LinkButton big href="https://forms.gle/bMLeKDbDTNdGr6ry9" target="_blank">สมัครเข้าร่วมกิจกรรม</LinkButton>
+        </Center>
+        <br/>
+        <Center>
+          <P>ปิดรับสมัครผู้เข้าร่วมกิจกรรมวันที่ 15 เมษายน 2563</P>
         </Center>
       </div>
     </Section>
