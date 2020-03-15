@@ -1,11 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
-import CodingImage from "../../images/coding.png"
-import LearningImage from "../../images/learning.png"
-import MeetingImage from "../../images/meeting.png"
 import { Container, Heading, Center } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
+import { useBenefitsImages } from "../../common/queries/benefits"
 
 const Section = styled.div`
   padding: 50px 0;
@@ -42,7 +41,14 @@ const Content = styled.p`
   margin: 0;
 `
 
+const ImageContainer = styled.div`
+  width: 200px;
+  height: 200px;
+`
+
 export default function() {
+  const { coding, learning, meeting } = useBenefitsImages()
+
   return (
     <Section>
       <Container>
@@ -54,7 +60,9 @@ export default function() {
         <Grid>
           <CardContent>
             <Center>
-              <img width="200px" height="200px" src={CodingImage}></img>
+              <ImageContainer>
+                <Img fluid={coding.source} />
+              </ImageContainer>
             </Center>
             <Center>
               <Heading color={colors.orange}>Coding</Heading>
@@ -66,19 +74,24 @@ export default function() {
           </CardContent>
           <CardContent>
             <Center>
-              <img width="200px" height="200px" src={LearningImage}></img>
+              <ImageContainer>
+                <Img fluid={learning.source} />
+              </ImageContainer>
             </Center>
             <Center>
               <Heading color={colors.blue}>Learning</Heading>
             </Center>
             <Content>
               ภายในงานมีการจัด Workshop ต่าง ๆ ให้ความรู้ด้าน Coding และมีพี่ ๆ
-              Staff ประจำทีมคอยให้ความช่วยเหลือ เพื่อให้มั่นใจว่าทุกคนได้ความรู้กลับไปนอนกอดที่บ้านแน่นอน!
+              Staff ประจำทีมคอยให้ความช่วยเหลือ
+              เพื่อให้มั่นใจว่าทุกคนได้ความรู้กลับไปนอนกอดที่บ้านแน่นอน!
             </Content>
           </CardContent>
           <CardContent>
             <Center>
-              <img width="200px" height="200px" src={MeetingImage}></img>
+              <ImageContainer>
+                <Img fluid={meeting.source} />
+              </ImageContainer>
             </Center>
             <Center>
               <Heading color={colors.red}>Meeting</Heading>

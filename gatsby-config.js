@@ -10,8 +10,36 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `benefits`,
+        path: `${__dirname}/src/images/benefits`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `gallerys`,
+        path: `${__dirname}/src/images/gallerys`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `logos`,
+        path: `${__dirname}/src/images/logos`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `reviewers`,
+        path: `${__dirname}/src/images/reviewers`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sponsors`,
+        path: `${__dirname}/src/images/sponsors`,
       },
     },
     `gatsby-transformer-sharp`,

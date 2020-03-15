@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 import { Container, Heading } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
@@ -18,7 +19,7 @@ const ModalBox = styled.div`
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 `
 
-const ModalContent = styled.img`
+const ModalContent = styled.div`
   margin: auto;
   display: block;
   width: 80%;
@@ -29,10 +30,11 @@ const ModalContent = styled.img`
   animation-duration: 0.6s;
 `
 
-const Image = styled.img`
+const Image = styled.div`
   border-radius: 5px;
   transition: 0.3s;
   width: 100%;
+  overflow: hidden;
 
   :hover {
     opacity: 0.7;
@@ -59,14 +61,18 @@ const Close = styled.span`
 
 export default function(props) {
   const [isOpen, setIsOpen] = useState(false)
-  
+
   return (
     <div>
-      <Image src={props.src} onClick={() => setIsOpen(!isOpen)} />
+      <Image onClick={() => setIsOpen(!isOpen)}>
+        <Img fluid={props.src} />
+      </Image>
       {isOpen && (
         <ModalBox>
           <Close onClick={() => setIsOpen(!isOpen)}>&times;</Close>
-          <ModalContent src={props.src} />
+          <ModalContent>
+            <Img fluid={props.src} />
+          </ModalContent>
         </ModalBox>
       )}
     </div>

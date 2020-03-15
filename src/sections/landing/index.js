@@ -1,19 +1,20 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
-import WebForFunLogo from "../../images/logo.png"
 import { Center, Heading, LinkButton } from "../../common/components"
 import { fonts, media } from "../../common/style"
+import { useLogosImages } from "../../common/queries/logos"
 
 const Section = styled.div`
   min-height: 100vh;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
 `
 
-const Logo = styled.img`
+const Logo = styled.div`
   width: 200px;
   height: 259px;
   margin-top: 50px;
@@ -25,18 +26,22 @@ const Content = styled.div`
   font-size: 1.4rem;
   font-family: ${fonts.header};
   margin-top: -20px;
-  
+
   ${media.phone`
     font-size: 1.2rem;
   `}
 `
 
 export default function() {
+  const { logo } = useLogosImages()
+
   return (
     <Section>
       <div>
         <Center>
-          <Logo src={WebForFunLogo} />
+          <Logo>
+            <Img fluid={logo.source} />
+          </Logo>
         </Center>
 
         <Center>
@@ -46,10 +51,16 @@ export default function() {
           <Content>@Clazy Cafe’ BTS Sanam Pao</Content>
         </Center>
 
-        <br/>
-        <br/>
+        <br />
+        <br />
         <Center>
-          <LinkButton big href="https://forms.gle/bMLeKDbDTNdGr6ry9" target="_blank">สมัครเข้าร่วมกิจกรรม</LinkButton>
+          <LinkButton
+            big
+            href="https://forms.gle/bMLeKDbDTNdGr6ry9"
+            target="_blank"
+          >
+            สมัครเข้าร่วมกิจกรรม
+          </LinkButton>
         </Center>
       </div>
     </Section>
