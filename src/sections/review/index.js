@@ -83,6 +83,10 @@ const Slider = styled.div`
   `}
 `
 
+const Arrow = styled.div`
+  user-select: none;
+`
+
 function useSlide(maxValue, defaultValue) {
   const [counter, setCounter] = useState(defaultValue);
 
@@ -120,12 +124,12 @@ export default function() {
 
         <FlexRight>
           <Slider>
-            <div onClick={decrement}>
+            <Arrow onClick={decrement}>
               <FontAwesomeIcon icon={faArrowLeft} />
-            </div>
-            <div onClick={increment}>
+            </Arrow>
+            <Arrow onClick={increment}>
               <FontAwesomeIcon icon={faArrowRight} />
-            </div>
+            </Arrow>
           </Slider>
         </FlexRight>
       </Container>
