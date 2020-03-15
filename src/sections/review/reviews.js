@@ -3,12 +3,18 @@ import ZinPasaweeLaearunProfile from "../../images/reviewers/ZinPasaweeLaearun.j
 import NattakitSamrethProfile from "../../images/reviewers/NattakitSamreth.jpg"
 import PattimaSommaiProfile from "../../images/reviewers/PattimaSommai.jpg"
 import SurasakChaisurinProfile from "../../images/reviewers/SurasakChaisurin.jpg"
+import SuthepChanchupholProfile from "../../images/reviewers/SuthepChanchuphol.jpg"
 
 export default [
   {
     reviewer: "Nattaphon Chaisiriwattanakul",
     profile: NattaphonChaisiriwattanakulProfile,
     detail: "จะว่าเป็นค่ายก็ไม่ใช่ เรียก Web Hackathon แทนแล้วกัน เป็นกิจกรรมที่สนุกมาก ไม่เครียดเท่าไป Hackathon จริงๆเท่าไหร่เพราะเหมือนมาแชร์ความรู้หรือมาทำเว็บกันสนุกๆ ทั้งสต๊าฟและผู้ร่วมงานคือเป็นกันเอง คุยกันได้หมดเลย บรรยากาศก็ดี อาหารอร่อยก็จ้า",
+  },
+  {
+    reviewer: "Suthep Chanchuphol",
+    profile: SuthepChanchupholProfile,
+    detail: "ถ้าหากคุณกำลังเป็นคนที่สนใจในด้านของ Web Developer ล่ะก็ อยากให้มางาน Web For Fun กันดูนะคะ  ในงานนี้ เราจะได้เจอคนที่มีความสนใจเหมือนๆ กับเรา ได้แลกเปลี่ยนความรู้อะไรใหม่ๆ ที่อาจจะยังไม่รู้ และที่สำคัญเลยคือ เราจะได้สร้างผลงานของเราใน Hackathon ร่วมกับผู้อื่นอีกด้วย  มาร่วมเฮฮาและสนุกไปด้วยกันนะคะ ห้ามพลาดเลยค่ะ"
   },
   {
     reviewer: "Zin Pasawee Laearun",
