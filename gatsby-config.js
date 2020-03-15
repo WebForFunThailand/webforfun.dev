@@ -5,6 +5,12 @@ module.exports = {
     author: `@webforfun`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '200512364567193',
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
