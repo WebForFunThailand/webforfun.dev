@@ -13,6 +13,7 @@ const Section = styled.div`
 const SponsorLogo = styled.div`
   opacity: 0.8;
   transition: 0.3s;
+  width: 165px;
   height: 80px;
 
   &:hover {
@@ -22,6 +23,7 @@ const SponsorLogo = styled.div`
 
 export default function() {
   const { clazy } = useSponsersImages()
+  console.log(clazy)
 
   return (
     <Section>
