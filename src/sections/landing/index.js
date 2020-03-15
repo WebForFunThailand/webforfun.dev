@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import { Center, Heading, LinkButton } from "../../common/components"
+import { Center, Heading, LinkButton, P } from "../../common/components"
 import { fonts, media } from "../../common/style"
 import { useLogosImages } from "../../common/queries/logos"
 
@@ -61,6 +61,10 @@ export default function() {
           >
             สมัครเข้าร่วมกิจกรรม
           </LinkButton>
+        </Center>
+        <br/>
+        <Center>
+          <P>ปิดรับสมัครผู้เข้าร่วมกิจกรรมวันที่ 15 เมษายน 2563</P>
         </Center>
       </div>
     </Section>

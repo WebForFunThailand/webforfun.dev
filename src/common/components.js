@@ -11,6 +11,11 @@ export const Container = styled.div`
   `}
 `
 
+export const P = styled.div`
+  color: #555;
+  font-family: ${fonts.content};
+`
+
 export const Heading = styled.h1`
   color: ${props => props.color ? props.color : colors.red};
   font-family: ${fonts.header}; 
