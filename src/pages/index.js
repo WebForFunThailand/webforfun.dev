@@ -18,7 +18,7 @@ import ContactSection from "../sections/contact"
 
 const IndexPage = () => (
   <>
-    <SEO title="Web For Fun Hackathon 2020" />
+    <SEO />
     <GlobalStyle />
 
     <Navbar />
