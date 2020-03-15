@@ -1,6 +1,6 @@
 import React from "react"
 
-import {GlobalStyle} from "../common/style"
+import { GlobalStyle } from "../common/style"
 
 import SEO from "../common/seo"
 import Navbar from "../common/navbar"
@@ -25,24 +25,24 @@ const IndexPage = () => (
 
     <LandingSection />
     <div id="about" name="about">
-        <AboutSection />
-        <BenefitSection />
+      <AboutSection />
+      <BenefitSection />
     </div>
     <div id="venue" name="venue">
-        <VenueSection />
+      <VenueSection />
     </div>
     <div id="gallery" name="gallery">
-        <GallerySection />
-        <ReviewSection />
+      <GallerySection />
+      <ReviewSection />
     </div>
     <div id="faq" name="faq">
-        <FAQSection />
+      <FAQSection />
     </div>
     <div id="sponsor" name="sponsor">
-        <SponsorSection />
+      <SponsorSection />
     </div>
     <div id="contact" name="contact">
-        <ContactSection />
+      <ContactSection />
     </div>
 
     <Footer />

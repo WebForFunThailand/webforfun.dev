@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: '200512364567193',
+        pixelId: "200512364567193",
       },
     },
     `gatsby-plugin-styled-components`,
@@ -25,8 +25,36 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `benefits`,
+        path: `${__dirname}/src/images/benefits`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `gallerys`,
+        path: `${__dirname}/src/images/gallerys`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `logos`,
+        path: `${__dirname}/src/images/logos`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `reviewers`,
+        path: `${__dirname}/src/images/reviewers`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sponsors`,
+        path: `${__dirname}/src/images/sponsors`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -40,7 +68,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`,
+        icon: `src/images/logos/logo.png`, // This path is relative to the root of the site.
       },
     },
   ],
