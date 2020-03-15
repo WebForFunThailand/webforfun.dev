@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-import { Anchor, Center, Container, Heading } from "../../common/components"
+import { Anchor, Center, Container, Heading, P } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
 
 const Section = styled.div`
@@ -48,7 +48,7 @@ const FAQ = function(props) {
         {props.question}
       </h2>
       {isOpen &&
-        <p>{props.answer}</p>
+        <P>{props.answer}</P>
       }
     </FAQContainer>
   )
@@ -80,7 +80,7 @@ export default function() {
           <div>
             <span style={{marginRight: 7}}>งานนี้จัดที่ Clazy Cafe' ใกล้กับ BTS สนามเป้า ในวันที่ 2 - 3 พฤษภาคม 2563</span>
             <p>
-              แผนที่: <Anchor href="https://goo.gl/maps/CYgxXYCXVPfdyG3c8">https://goo.gl/maps/CYgxXYCXVPfdyG3c8</Anchor>
+              แผนที่: <Anchor target="_blank" href="https://goo.gl/maps/CYgxXYCXVPfdyG3c8">https://goo.gl/maps/CYgxXYCXVPfdyG3c8</Anchor>
             </p>
           </div>}/>
         <FAQ
@@ -95,6 +95,12 @@ export default function() {
           question="งานจะได้จัดรึป่าว เนื่องมาจากเหตุการณ์การระบาดของไวรัส COVID-19?"
           answer="เนื่องมาจากปัจจุบันมีการระบาดของไวรัส COVID-19 ส่งผลให้กิจกรรมและงานต่างๆต้องเลื่อนออกไป สำหรับพวกเราแล้วเราให้ความสำคัญกับผู้เข้าร่วมกิจกรรมเป็นอันดับแรก ดังนั้นถ้าหากว่ามีแนวโน้มว่าเหตุการณ์จะรุนแรงขึ้น เราจะแจ้งให้ทุกท่านทราบทันทีถึงแนวทางการรับมือ (เช่นการ เลื่อนกิจกรรม หรือ แนวทางการรับมือในงาน) ทาง Facebook Page: Web For Fun ก่อนถึงวันกิจกรรม 2 อาทิตย์เป็นอย่างตำ่"
         />
+
+        <br />
+        <br />
+        <Center>
+          <P>ถ้าหากมีข้อสงสัยเพิ่มเติมสามารถสอบถามเพิ่มเติมได้ที่ <Anchor href="https://facebook.com/webforfun" target="_blank">Facebook: Web For Fun</Anchor></P>
+        </Center>
       </Container>
     </Section>
   )
