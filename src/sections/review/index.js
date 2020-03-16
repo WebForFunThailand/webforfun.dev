@@ -89,6 +89,11 @@ const Arrow = styled.div`
   user-select: none;
 `
 
+const Image = styled(Img)`
+  max-width: 200px;
+  margin: auto auto;
+`
+
 function useSlide(maxValue, defaultValue) {
   const [counter, setCounter] = useState(defaultValue)
 
@@ -123,7 +128,7 @@ export default function() {
 
         <Card>
           <div>
-            <Img fluid={reviewerImage} />
+            <Image fluid={reviewerImage} />
           </div>
           <div>
             <p>“{detail}”</p>
