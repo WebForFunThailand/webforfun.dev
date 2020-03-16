@@ -3,12 +3,8 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-import { Anchor, Center, Container, Heading, P } from "../../common/components"
+import { Anchor, Center, Container, Heading, P, Section } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
-
-const Section = styled.div`
-  padding: 50px 0;
-`
 
 const FAQContainer = styled.div`
   border-bottom: 1px solid #ececec; 

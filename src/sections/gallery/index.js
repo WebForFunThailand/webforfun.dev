@@ -1,15 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Container, Heading, Center } from "../../common/components"
-import { colors, fonts, media } from "../../common/style"
+import { Container, Heading, Center, Section } from "../../common/components"
+import { media } from "../../common/style"
 import { useGallerysImages } from "../../common/queries/gallerys"
 
 import Modal from "./Modal"
-
-const Section = styled.div`
-  padding: 50px 0;
-`
 
 const Grid = styled.div`
   display: grid;

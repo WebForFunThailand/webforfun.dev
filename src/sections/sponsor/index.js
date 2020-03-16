@@ -2,13 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import { Center, Container, Heading, LinkButton } from "../../common/components"
-import { colors, fonts } from "../../common/style"
+import { Center, Container, Heading, LinkButton, Section } from "../../common/components"
 import { useSponsersImages } from "../../common/queries/sponsors"
-
-const Section = styled.div`
-  padding: 50px 0;
-`
 
 const SponsorLogo = styled.div`
   opacity: 0.8;

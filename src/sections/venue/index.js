@@ -1,12 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Center, Container, Heading } from "../../common/components"
+import { Center, Container, Heading, Section } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
-
-const Section = styled.div`
-  padding: 50px 0;
-`
 
 const Grid = styled.div`
   display: grid;

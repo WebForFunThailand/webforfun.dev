@@ -1,6 +1,14 @@
 import styled from "styled-components"
 import { colors, fonts, media } from "./style"
 
+export const Section = styled.div`
+  padding: 50px 0;
+  
+  ${media.tablet`
+    padding: 20px 0; 
+  `}
+`
+
 export const Container = styled.div`
   width: 1100px;
   margin: auto auto;

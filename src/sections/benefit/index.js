@@ -2,13 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import { Container, Heading, Center } from "../../common/components"
+import { Container, Heading, Center, Section } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
 import { useBenefitsImages } from "../../common/queries/benefits"
-
-const Section = styled.div`
-  padding: 50px 0;
-`
 
 const Grid = styled.div`
   display: grid;

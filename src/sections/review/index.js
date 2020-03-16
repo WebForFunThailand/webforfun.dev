@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
-import Img from "gatsby-image"
 
 import reviews from "./reviews"
-import { Center, Container, Heading } from "../../common/components"
+import { Center, Container, Heading, Section } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
 import { useReviewersImages } from "../../common/queries/reviewers"
-
-const Section = styled.div`
-  padding: 50px 0;
-`
 
 const Card = styled.div`
   display: grid;
@@ -26,6 +22,10 @@ const Card = styled.div`
       margin: auto auto;
     `}
   }
+  
+  ${media.tablet`
+    grid-gap: 25px;
+  `}
 
   & p {
     color: #555;

@@ -4,12 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faFacebook, faFacebookMessenger } from "@fortawesome/free-brands-svg-icons"
 
-import { Anchor, Center, Container, Heading } from "../../common/components"
+import { Anchor, Center, Container, Heading, Section } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
-
-const Section = styled.div`
-  padding: 50px 0;
-`
 
 const Grid = styled.div`
   display: grid;
