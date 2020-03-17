@@ -1,4 +1,5 @@
 import React from "react"
+import loadable from "@loadable/component"
 
 import { GlobalStyle } from "../common/style"
 
@@ -11,10 +12,13 @@ import AboutSection from "../sections/about"
 import BenefitSection from "../sections/benefit"
 import VenueSection from "../sections/venue"
 import GallerySection from "../sections/gallery"
-import ReviewSection from "../sections/review"
 import FAQSection from "../sections/faq"
 import SponsorSection from "../sections/sponsor"
 import ContactSection from "../sections/contact"
+
+const ReviewSection = loadable(() =>
+  import(/* webpackChunkName: `ReviewSection` */ "../sections/review")
+)
 
 const IndexPage = () => (
   <>
