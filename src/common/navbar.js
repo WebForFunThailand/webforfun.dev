@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import Img from "gatsby-image"
 
-import { Anchor, Container, LinkButton } from "./components"
+import { Anchor, Center, Container, DisabledButton, LinkButton } from "./components"
 import { media } from "./style"
 import { useLogosImages } from "./queries/logos"
 
@@ -196,12 +196,15 @@ export default function() {
           </Link>
         </AnchorContainer>
         <div>
-          <LinkButton
-            href="https://forms.gle/bMLeKDbDTNdGr6ry9"
-            target="_blank"
-          >
-            สมัครกิจกรรม
-          </LinkButton>
+          <DisabledButton big>
+            เปิดรับสมัครเร็วๆนี้
+          </DisabledButton>
+          {/*<LinkButton*/}
+          {/*  href="https://forms.gle/bMLeKDbDTNdGr6ry9"*/}
+          {/*  target="_blank"*/}
+          {/*>*/}
+          {/*  สมัครกิจกรรม*/}
+          {/*</LinkButton>*/}
         </div>
       </FlexContainer>
     </NavContainer>

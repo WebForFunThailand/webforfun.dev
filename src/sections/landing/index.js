@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import { Center, Heading, LinkButton, P } from "../../common/components"
+import { Center, DisabledButton, Heading, LinkButton, P } from "../../common/components"
 import { fonts, media } from "../../common/style"
 import { useLogosImages } from "../../common/queries/logos"
 
@@ -45,7 +45,7 @@ export default function() {
         </Center>
 
         <Center>
-          <Heading>2 - 3 พฤษภาคม 2563</Heading>
+          <Heading>พบกันเร็วๆนี้ในปี 2020</Heading>
         </Center>
         <Center>
           <Content>@Clazy Cafe’ BTS Sanam Pao</Content>
@@ -54,18 +54,21 @@ export default function() {
         <br />
         <br />
         <Center>
-          <LinkButton
-            big
-            href="https://forms.gle/bMLeKDbDTNdGr6ry9"
-            target="_blank"
-          >
-            สมัครเข้าร่วมกิจกรรม
-          </LinkButton>
+          <DisabledButton big>
+            เปิดรับสมัครเร็วๆนี้
+          </DisabledButton>
+          {/*<LinkButton*/}
+          {/*  big*/}
+          {/*  href="https://forms.gle/bMLeKDbDTNdGr6ry9"*/}
+          {/*  target="_blank"*/}
+          {/*>*/}
+          {/*  สมัครเข้าร่วมกิจกรรม*/}
+          {/*</LinkButton>*/}
         </Center>
-        <br/>
-        <Center>
-          <P>ปิดรับสมัครผู้เข้าร่วมกิจกรรมวันที่ 15 เมษายน 2563</P>
-        </Center>
+        {/*<br/>*/}
+        {/*<Center>*/}
+        {/*  <P>ปิดรับสมัครผู้เข้าร่วมกิจกรรมวันที่ 15 เมษายน 2563</P>*/}
+        {/*</Center>*/}
       </div>
     </Section>
   )

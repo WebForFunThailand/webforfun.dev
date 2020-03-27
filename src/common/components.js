@@ -49,6 +49,19 @@ export const Anchor = styled.a`
   }
 `
 
+export const DisabledButton = styled.div`
+  background: #ddd;
+  border-radius: 4px;
+  padding: 7px 20px;
+  display: inline-block;
+  
+  font-size: ${props => props.big ? "1.2rem" : "1rem"};
+  text-align: center;
+  
+  text-decoration: none;
+  font-family: ${fonts.header};
+`
+
 export const LinkButton = styled.a`
   background: ${colors.red};
   border-radius: 4px;
