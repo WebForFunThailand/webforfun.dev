@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
@@ -13,6 +13,8 @@ const Card = styled.div`
   display: grid;
   grid-gap: 50px;
   grid-template-columns: 1fr 4fr;
+  opacity: ${({ enable }) => (enable ? 1 : 0)};
+  transition: 0.6s;
 
   & img {
     border-radius: 50%;
@@ -22,7 +24,7 @@ const Card = styled.div`
       margin: auto auto;
     `}
   }
-  
+
   ${media.tablet`
     grid-gap: 25px;
   `}
@@ -94,6 +96,43 @@ const Image = styled(Img)`
   margin: auto auto;
 `
 
+const SlideContainer = styled.div`
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.6s;
+`
+
+const slideAnimation = (counter, direction) =>
+  direction > 0
+    ? keyframes`
+from {
+  margin-left: ${counter * -100 + "%"};
+}
+to {
+  margin-left: ${(counter + 1) * -100 + "%"};
+}
+`
+    : keyframes`
+    from {
+      margin-left: ${(counter + 2) * -100 + "%"};
+    }
+    to {
+      margin-left: ${(counter + 1) * -100 + "%"};
+    }
+    `
+
+const MovableSlideContent = styled.div`
+  width: ${({ itemNumber }) => `${itemNumber}00%`};
+  display: grid;
+  grid-template-columns: repeat(${({ itemNumber }) => itemNumber}, 1fr);
+  animation-name: ${({ counter, direction }) =>
+    slideAnimation(counter, direction)};
+  animation-iteration-count: 1;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+`
+
 function useSlide(maxValue, defaultValue) {
   const [counter, setCounter] = useState(defaultValue)
 
@@ -110,11 +149,12 @@ function useSlide(maxValue, defaultValue) {
 
 export default function() {
   const [counter, increment, decrement] = useSlide(reviews.length, 0)
+  const [direction, setDirection] = useState(1)
   const profileImages = useReviewersImages()
 
-  const { reviewer, profileImageName, detail } = reviews[counter]
+  // const { reviewer, profileImageName, detail } = reviews[counter]
 
-  const reviewerImage = profileImages[profileImageName].source
+  // const reviewerImage = profileImages[profileImageName].source
 
   return (
     <Section>
@@ -125,23 +165,59 @@ export default function() {
           </Heading>
         </Center>
         <br />
+      </Container>
 
-        <Card>
-          <div>
-            <Image fluid={reviewerImage} />
-          </div>
-          <div>
-            <p>“{detail}”</p>
-            <Profile>รีวิวโดย {reviewer}</Profile>
-          </div>
-        </Card>
+      <Container>
+        <SlideContainer>
+          <MovableSlideContent
+            itemNumber={reviews.length + 2}
+            counter={counter}
+            direction={direction}
+          >
+            {[reviews[reviews.length - 1], ...reviews, reviews[0]].map(
+              ({ reviewer, profileImageName, detail }, index) => {
+                const reviewerImage = profileImages[profileImageName].source
+                return (
+                  <Card
+                    enable={
+                      index === counter + 1 ||
+                      (index === reviews.length + 1 && counter + 1 === 1) ||
+                      (index === 0 && counter + 1 === reviews.length)
+                    }
+                    key={index}
+                  >
+                    <div>
+                      <Image fluid={reviewerImage} />
+                    </div>
+                    <div>
+                      <p>“{detail}”</p>
+                      <Profile>รีวิวโดย {reviewer}</Profile>
+                    </div>
+                  </Card>
+                )
+              }
+            )}
+          </MovableSlideContent>
+        </SlideContainer>
+      </Container>
 
+      <Container>
         <FlexRight>
           <Slider>
-            <Arrow onClick={decrement}>
+            <Arrow
+              onClick={() => {
+                decrement()
+                setDirection(-1)
+              }}
+            >
               <FontAwesomeIcon icon={faArrowLeft} />
             </Arrow>
-            <Arrow onClick={increment}>
+            <Arrow
+              onClick={() => {
+                increment()
+                setDirection(1)
+              }}
+            >
               <FontAwesomeIcon icon={faArrowRight} />
             </Arrow>
           </Slider>
