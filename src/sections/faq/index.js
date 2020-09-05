@@ -1,28 +1,37 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import DropDownIcon from "./DropDownIcon"
 
-import { Anchor, Center, Container, Heading, P, Section } from "../../common/components"
+import {
+  Anchor,
+  Center,
+  Container,
+  Heading,
+  P,
+  Section,
+} from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
 
 const FAQContainer = styled.div`
-  border-bottom: 1px solid #ececec; 
+  border-bottom: 1px solid #ececec;
   padding: 5px 20px;
-  
+
   & h2 {
     font-size: 1.2rem;
     font-weight: normal;
     font-family: ${fonts.header};
     cursor: pointer;
-    
+
     display: block;
     position: relative;
   }
   & h2 div {
     position: absolute;
     right: 0;
-    
+    height: 100%;
+
     ${media.tablet`
       position: relative;
       display: inline-block;
@@ -35,21 +44,34 @@ const FAQContainer = styled.div`
   }
 `
 
+const ParagraphContainer = styled.div`
+  width: 100%;
+  overflow: hidden;
+  max-height: ${({ isOpen }) => (isOpen ? "100px" : "0px")};
+  transition: 0.6s;
+`
+
+const Paragraph = styled.div`
+  padding: 10px;
+`
+
 const FAQ = function(props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <FAQContainer>
       <h2 onClick={() => setIsOpen(!isOpen)}>
-        <div><FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} /></div>
+        <div>
+          <DropDownIcon enable={isOpen}></DropDownIcon>
+          {/* <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} /> */}
+        </div>
         {props.question}
       </h2>
-      {isOpen &&
-        <P>{props.answer}</P>
-      }
+      <ParagraphContainer isOpen={isOpen}>
+        <Paragraph isOpen={isOpen}>{props.answer}</Paragraph>
+      </ParagraphContainer>
     </FAQContainer>
   )
 }
-
 
 export default function() {
   return (
@@ -58,7 +80,7 @@ export default function() {
         <Center>
           <Heading color={colors.orange}>FAQ - คำถามที่พบบ่อย</Heading>
         </Center>
-        <br/>
+        <br />
 
         <FAQ
           question="Web For Fun คืออะไร?"
@@ -72,10 +94,16 @@ export default function() {
           question="เป็นนักเรียน สามารถสมัครได้หรือไม่?"
           answer="งาน Web For Fun รับทั้งนักเรียนระดับมัธยม นักศึกษา และบุคคลทั่วไปที่อายุอยู่ในช่วงระหว่าง 16-24 ปี"
         />
-        <FAQ question="งานจัดที่ไหน วันที่เท่าไหร่?" answer={
-          <div>
-            สำหรับกิจกรรมเราตอนนี้ทีมงานคุยกันแล้วว่าขอเลื่อนไปโดยไม่มีกำหนดนะครับเนื่องมาจากไวรัส COVID-19 สามารถอ่านรายละเอียดได้ในเพจเลยครับ ส่วนสำหรับวันจัดกิจกรรมจะแจ้งให้ทราบอีกทีเมื่อได้วันที่แน่นอนแล้วครับ
-          </div>}/>
+        <FAQ
+          question="งานจัดที่ไหน วันที่เท่าไหร่?"
+          answer={
+            <div>
+              สำหรับกิจกรรมเราตอนนี้ทีมงานคุยกันแล้วว่าขอเลื่อนไปโดยไม่มีกำหนดนะครับเนื่องมาจากไวรัส
+              COVID-19 สามารถอ่านรายละเอียดได้ในเพจเลยครับ
+              ส่วนสำหรับวันจัดกิจกรรมจะแจ้งให้ทราบอีกทีเมื่อได้วันที่แน่นอนแล้วครับ
+            </div>
+          }
+        />
         {/*<FAQ question="งานจัดที่ไหน วันที่เท่าไหร่?" answer={*/}
         {/*  <div>*/}
         {/*    <span style={{marginRight: 7}}>งานนี้จัดที่ Clazy Cafe' ใกล้กับ BTS สนามเป้า ในวันที่ 2 - 3 พฤษภาคม 2563</span>*/}
@@ -99,7 +127,12 @@ export default function() {
         <br />
         <br />
         <Center>
-          <P>ถ้าหากมีข้อสงสัยเพิ่มเติมสามารถสอบถามเพิ่มเติมได้ที่ <Anchor href="https://facebook.com/webforfun" target="_blank">Facebook: Web For Fun</Anchor></P>
+          <P>
+            ถ้าหากมีข้อสงสัยเพิ่มเติมสามารถสอบถามเพิ่มเติมได้ที่{" "}
+            <Anchor href="https://facebook.com/webforfun" target="_blank">
+              Facebook: Web For Fun
+            </Anchor>
+          </P>
         </Center>
       </Container>
     </Section>
