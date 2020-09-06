@@ -35,12 +35,12 @@ const Quote = styled.div`
   `}
 `
 const OpenQuote = styled(Quote)`
-  top: -50px;
-  left: -50px;
+  top: 0;
+  left: -80px;
 `
 const CloseQuote = styled(Quote)`
-  bottom: -80px;
-  right: -50px;
+  bottom: -30px;
+  right: -70px;
 `
 
 export default function() {
@@ -53,9 +53,9 @@ export default function() {
         <About>
           <OpenQuote>“</OpenQuote>
           <CloseQuote>”</CloseQuote>
-          <div>
+          <p style={{textIndent: 45}}>
             งาน Web For Fun เป็นงาน Hackathon สำหรับผู้เริ่มต้นที่มีความสนใจในด้านการพัฒนาเว็บไซต์ ให้ได้พัฒนาฝีมือ, เรียนรู้จากผู้มีประสบการณ์ และพบปะเพื่อน ๆ ที่มีความชอบเหมือนกัน โดยในงานจะมีเหล่านักพัฒนาที่มีประสบการณ์แล้วคอยให้คำแนะนำ และช่วยเหลือในแต่ละทีม นอกจากนี้ภายในงานจะมี Workshop ต่างๆ เพื่อให้นักพัฒนาแต่ละคนสามารถคิดไอเดียออกมาได้สนุกที่สุด
-          </div>
+          </p>
         </About>
       </Container>
     </Section>

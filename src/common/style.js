@@ -7,6 +7,9 @@ export const GlobalStyle = createGlobalStyle`
     src: url("./fonts/HijoPutaPeligroso.otf") format("opentype");
   }
   
+  p {
+    line-height: 30px;
+  }
   body {
     margin: 0;
     font-size: 16px;
