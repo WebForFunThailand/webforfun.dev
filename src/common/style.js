@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const fonts = {
   content: "'Sarabun', sans-serif",
-  header: "'Kanit', sans-serif",
+  header: "'Sukhumvit Set', 'Kanit', sans-serif",
   logo: "'HijoPutaPeligroso', sans-serif",
 }
 

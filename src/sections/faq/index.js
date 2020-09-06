@@ -54,6 +54,8 @@ const ParagraphContainer = styled.div`
 const Paragraph = styled.div`
   padding: 10px;
   padding-bottom: 30px;
+  
+  font-family: ${fonts.content};
 `
 
 const FAQ = function(props) {
