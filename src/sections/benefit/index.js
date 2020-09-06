@@ -23,9 +23,14 @@ const Grid = styled.div`
 
 const CardContent = styled.div`
   background: #ffffff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   padding: 48px 24px;
+  transition: 0.7s;
+  
+  &:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  }
 
   max-width: 350px;
 `
