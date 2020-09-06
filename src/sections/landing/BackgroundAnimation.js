@@ -1,28 +1,37 @@
 import React, { useEffect, useState } from "react"
 import Sketch from "react-p5";
 
-export const BackgroundAnimation = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+export default () => {
+  const [screenWidth, setScreenWidth] = useState(null);
+  const [screenHeight, setScreenHeight] = useState(null);
   const [loading, setLoading] = useState(false)
 
   let blocks = [];
   let time = 1;
   let timeoutId = null;
+  let P5 = null;
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      setScreenHeight(window.innerHeight)
-      setScreenWidth(window.innerWidth)
-      if (timeoutId) clearTimeout(timeoutId);
-      setLoading(true)
+    if (typeof window !== `undefined`) {
+      const updateScreenResolution = () => {
+        setScreenHeight(window.innerHeight)
+        setScreenWidth(window.innerWidth)
+        if (timeoutId) clearTimeout(timeoutId);
+        setLoading(true)
 
-      timeoutId = setTimeout(() => {
-        setLoading(false)
-      }, 500)
-    })
+        timeoutId = setTimeout(() => {
+          setLoading(false)
+        }, 500)
+      }
 
-    return window.removeEventListener('resize', () => {});
+      updateScreenResolution()
+
+      window.addEventListener('resize', () => {
+        updateScreenResolution()
+      })
+
+      return window.removeEventListener('resize', () => {});
+    }
   }, []);
 
   function getRandomInt(min, max) {
@@ -45,14 +54,16 @@ export const BackgroundAnimation = () => {
   }
 
   function createRect(x, y, size, color) {
-    window.p5.rect(x, y, size, size, 5);
-    window.p5.noStroke();
-    window.p5.fill(color);
+    if (P5) {
+      P5.rect(x, y, size, size, 5);
+      P5.noStroke();
+      P5.fill(color);
+    }
   }
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(screenWidth, screenHeight).parent(canvasParentRef);
-    window.p5 = p5;
+    P5 = p5;
   };
 
   const draw = (p5) => {

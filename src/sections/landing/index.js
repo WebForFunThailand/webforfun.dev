@@ -2,10 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import { Center, DisabledButton, Heading, LinkButton, P } from "../../common/components"
+import { Center, DisabledButton, Heading } from "../../common/components"
 import { fonts, media } from "../../common/style"
 import { useLogosImages } from "../../common/queries/logos"
-import { BackgroundAnimation } from "./BackgroundAnimation"
+
+const BackgroundAnimation = typeof window !== `undefined` ? require("./BackgroundAnimation").default : () => <div/>
 
 const Section = styled.div`
   min-height: 100vh;
