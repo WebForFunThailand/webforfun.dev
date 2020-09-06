@@ -47,15 +47,13 @@ const FAQContainer = styled.div`
 const ParagraphContainer = styled.div`
   width: 100%;
   overflow: hidden;
-  max-height: ${({ isOpen }) => (isOpen ? "100px" : "0px")};
+  max-height: ${({ isOpen }) => (isOpen ? "200px" : "0px")};
   transition: 0.6s;
 `
 
-const Paragraph = styled.div`
-  padding: 10px;
-  padding-bottom: 30px;
-  
+const Paragraph = styled.p`
   font-family: ${fonts.content};
+  color: #555;
 `
 
 const FAQ = function(props) {
