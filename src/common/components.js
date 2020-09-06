@@ -74,5 +74,10 @@ export const LinkButton = styled.a`
   color: white;
   text-decoration: none;
   font-family: ${fonts.header};
+  transition: 0.3s;
+  
+  &:hover {
+    background: #c0115c;
+  }
 `
 
