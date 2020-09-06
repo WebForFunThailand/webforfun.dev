@@ -99,7 +99,6 @@ const Image = styled(Img)`
 const SlideContainer = styled.div`
   width: 100%;
   position: relative;
-  overflow: hidden;
   transition: 0.6s;
 `
 
@@ -167,39 +166,41 @@ export default function() {
         <br />
       </Container>
 
-      <Container>
-        <SlideContainer>
-          <MovableSlideContent
-            itemNumber={reviews.length + 2}
-            counter={counter}
-            direction={direction}
-          >
-            {[reviews[reviews.length - 1], ...reviews, reviews[0]].map(
-              ({ reviewer, profileImageName, detail }, index) => {
-                const reviewerImage = profileImages[profileImageName].source
-                return (
-                  <Card
-                    enable={
-                      index === counter + 1 ||
-                      (index === reviews.length + 1 && counter + 1 === 1) ||
-                      (index === 0 && counter + 1 === reviews.length)
-                    }
-                    key={index}
-                  >
-                    <div>
-                      <Image fluid={reviewerImage} />
-                    </div>
-                    <div>
-                      <p>“{detail}”</p>
-                      <Profile>รีวิวโดย {reviewer}</Profile>
-                    </div>
-                  </Card>
-                )
-              }
-            )}
-          </MovableSlideContent>
-        </SlideContainer>
-      </Container>
+      <div style={{overflow: 'hidden'}}>
+        <Container>
+          <SlideContainer>
+            <MovableSlideContent
+              itemNumber={reviews.length + 2}
+              counter={counter}
+              direction={direction}
+            >
+              {[reviews[reviews.length - 1], ...reviews, reviews[0]].map(
+                ({ reviewer, profileImageName, detail }, index) => {
+                  const reviewerImage = profileImages[profileImageName].source
+                  return (
+                    <Card
+                      enable={
+                        index === counter + 1 ||
+                        (index === reviews.length + 1 && counter + 1 === 1) ||
+                        (index === 0 && counter + 1 === reviews.length)
+                      }
+                      key={index}
+                    >
+                      <div>
+                        <Image fluid={reviewerImage} />
+                      </div>
+                      <div>
+                        <p>“{detail}”</p>
+                        <Profile>รีวิวโดย {reviewer}</Profile>
+                      </div>
+                    </Card>
+                  )
+                }
+              )}
+            </MovableSlideContent>
+          </SlideContainer>
+        </Container>
+      </div>
 
       <Container>
         <FlexRight>
