@@ -45,6 +45,8 @@ const Content = styled.p`
 const ImageContainer = styled.div`
   width: 200px;
   height: 200px;
+  
+  margin-bottom: 15px;
 `
 
 export default function() {
