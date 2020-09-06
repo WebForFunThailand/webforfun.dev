@@ -5,9 +5,11 @@ import Img from "gatsby-image"
 import { Center, DisabledButton, Heading, LinkButton, P } from "../../common/components"
 import { fonts, media } from "../../common/style"
 import { useLogosImages } from "../../common/queries/logos"
+import { BackgroundAnimation } from "./BackgroundAnimation"
 
 const Section = styled.div`
   min-height: 100vh;
+  position: relative;
 
   display: flex;
   align-items: center;
@@ -32,12 +34,17 @@ const Content = styled.div`
   `}
 `
 
+const Container = styled.div`
+  position: absolute;
+`
+
 export default function() {
   const { logo } = useLogosImages()
 
   return (
     <Section>
-      <div>
+      <BackgroundAnimation/>
+      <Container>
         <Center>
           <Logo>
             <Img fluid={logo.source} />
@@ -69,7 +76,7 @@ export default function() {
         {/*<Center>*/}
         {/*  <P>ปิดรับสมัครผู้เข้าร่วมกิจกรรมวันที่ 15 เมษายน 2563</P>*/}
         {/*</Center>*/}
-      </div>
+      </Container>
     </Section>
   )
 }
