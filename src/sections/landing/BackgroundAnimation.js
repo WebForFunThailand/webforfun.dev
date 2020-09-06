@@ -4,13 +4,22 @@ import Sketch from "react-p5";
 export const BackgroundAnimation = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+  const [loading, setLoading] = useState(false)
+
   let blocks = [];
   let time = 1;
+  let timeoutId = null;
 
   useEffect(() => {
     window.addEventListener('resize', () => {
       setScreenHeight(window.innerHeight)
       setScreenWidth(window.innerWidth)
+      if (timeoutId) clearTimeout(timeoutId);
+      setLoading(true)
+
+      timeoutId = setTimeout(() => {
+        setLoading(false)
+      }, 500)
     })
 
     return window.removeEventListener('resize', () => {});
@@ -72,5 +81,9 @@ export const BackgroundAnimation = () => {
     ++time;
   };
 
-  return <Sketch setup={setup} draw={draw} />;
+  return (
+   <div style={{width: screenWidth, height: screenHeight, overflow: 'hidden'}}>
+     {loading ? null : <Sketch setup={setup} draw={draw} />}
+   </div>
+  )
 }
