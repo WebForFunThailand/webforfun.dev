@@ -53,6 +53,7 @@ const ParagraphContainer = styled.div`
 
 const Paragraph = styled.div`
   padding: 10px;
+  padding-bottom: 30px;
 `
 
 const FAQ = function(props) {
