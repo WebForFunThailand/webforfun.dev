@@ -67,7 +67,7 @@ export default function() {
           </Center>
 
           <Center>
-            <Heading>14-15 พฤศจิกายน 2020</Heading>
+            <Heading>14 - 15 พฤศจิกายน 2020</Heading>
           </Center>
           <Center>
             <Content>@Clazy Cafe’ BTS Sanam Pao</Content>
