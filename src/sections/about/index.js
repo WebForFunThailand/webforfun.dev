@@ -11,13 +11,13 @@ const About = styled.p`
   margin: 0 auto;
   margin-top: 30px;
   position: relative;
-  
+
   width: 60%;
-  
+
   ${media.tablet`
     width: 80%;
   `}
-  
+
   ${media.phone`
     width: 100%;
     margin: 0;
@@ -26,10 +26,10 @@ const About = styled.p`
 `
 
 const Quote = styled.div`
-  position: absolute;   
+  position: absolute;
   color: ${colors.blue};
   font-size: 100px;
-  
+
   ${media.phone`
     display: none;
   `}
@@ -53,8 +53,11 @@ export default function() {
         <About>
           <OpenQuote>“</OpenQuote>
           <CloseQuote>”</CloseQuote>
-          <p style={{textIndent: 45}}>
-            งาน Web For Fun เป็นงาน Hackathon สำหรับผู้เริ่มต้นที่มีความสนใจในด้านการพัฒนาเว็บไซต์ ให้ได้พัฒนาฝีมือ, เรียนรู้จากผู้มีประสบการณ์ และพบปะเพื่อน ๆ ที่มีความชอบเหมือนกัน โดยในงานจะมีเหล่านักพัฒนาที่มีประสบการณ์แล้วคอยให้คำแนะนำ และช่วยเหลือในแต่ละทีม นอกจากนี้ภายในงานจะมี Workshop ต่างๆ เพื่อให้นักพัฒนาแต่ละคนสามารถคิดไอเดียออกมาได้สนุกที่สุด
+          <p style={{ textIndent: 45 }}>
+            Web For Fun เป็นงาน Hackathon
+            สำหรับผู้ที่มีความสนใจในด้านการพัฒนาเว็บไซต์ได้มาสร้างสรรค์ผลงานและเรียนรู้สิ่งใหม่ๆร่วมกัน
+            โดยภายในงานจะมีเหล่านักพัฒนาที่มีประสบการณคอยให้คำแนะนำและคอยช่วยเหลือ
+            เพื่อให้แต่ละทีมสามารถสร้าสรรค์ผลงานออกมาได้สนุกที่สุด
           </p>
         </About>
       </Container>

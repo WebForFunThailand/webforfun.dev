@@ -27,7 +27,7 @@ const CardContent = styled.div`
   border-radius: 10px;
   padding: 48px 24px;
   transition: 0.7s;
-  
+
   &:hover {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
   }
@@ -45,7 +45,7 @@ const Content = styled.p`
 const ImageContainer = styled.div`
   width: 200px;
   height: 200px;
-  
+
   margin-bottom: 15px;
 `
 
@@ -68,11 +68,12 @@ export default function() {
               </ImageContainer>
             </Center>
             <Center>
-              <Heading color={colors.orange}>Coding</Heading>
+              <Heading color={colors.orange}>Inventing</Heading>
             </Center>
             <Content>
-              ผู้เข้าร่วมงานจะได้ลงมือเขียนโค้ดจริง ๆ
-              ร่วมกับทีมเพื่อทำให้โปรเจคเสร็จสิ้น
+              ผู้เข้าร่วมงานจะได้สร้างสรรค์ผลงานอย่างสนุกที่สุด
+              โดยไม่ต้องสนว่าผลงานจะจำหน่ายได้หรือไม่
+              และได้นำเสนอผลงานกับผู้เข้าร่วมงานคนอื่นๆ
             </Content>
           </CardContent>
           <CardContent>
@@ -82,12 +83,11 @@ export default function() {
               </ImageContainer>
             </Center>
             <Center>
-              <Heading color={colors.blue}>Learning</Heading>
+              <Heading color={colors.blue}>Experimenting</Heading>
             </Center>
             <Content>
-              ภายในงานมีการจัด Workshop ต่าง ๆ ให้ความรู้ด้าน Coding และมีพี่ ๆ
-              Staff ประจำทีมคอยให้ความช่วยเหลือ
-              เพื่อให้มั่นใจว่าทุกคนได้ความรู้กลับไปนอนกอดที่บ้านแน่นอน!
+              ผู้เข้าร่วมงานจะได้พัฒนาทักษะและลองทำสิ่งใหม่ๆ
+              โดยจะมีเหล่านักพัฒนาที่มีประสบการณ์คอยให้ความช่วยเหลือตลอดกิจกรรม
             </Content>
           </CardContent>
           <CardContent>
@@ -97,11 +97,11 @@ export default function() {
               </ImageContainer>
             </Center>
             <Center>
-              <Heading color={colors.red}>Meeting</Heading>
+              <Heading color={colors.red}>Socializing</Heading>
             </Center>
             <Content>
-              พบปะกับเพื่อนร่วมทีมและคนอื่น ๆ ที่ร่วมกิจกรรมภายในงาน
-              รวมไปถึงเหล่า Staff ผู้มากฝีมือและเหล่า Developer ผู้เชี่ยวชาญ
+              ได้พบปะกับเพื่อนร่วมทีมและผู้เข้าร่วมงานคนอื่น ๆ รวมไปถึงเหล่า
+              Staff ผู้มากฝีมือ
             </Content>
           </CardContent>
         </Grid>

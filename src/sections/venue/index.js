@@ -63,6 +63,12 @@ export default function() {
                 Clazy Cafe, 899 Phahonyothin Rd, Khwaeng Samsen Nai, Phaya Thai,
                 Bangkok 10400
               </p>
+              <h2>การเดินทาง</h2>
+              <p>
+                <li>นั่ง BTS ลงสถานนีรถไฟฟ้าสนามเป้า</li>
+                <li>ออกทางประตู 1</li>
+                <li>เดินตรงไปเรื่อยๆจะถึงที่จัดงาน</li>
+              </p>
             </Card>
             {/* <Card>
               <h2>การเดินทางด้วย BTS</h2>

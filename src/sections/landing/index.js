@@ -6,7 +6,10 @@ import { Center, DisabledButton, Heading } from "../../common/components"
 import { fonts, media } from "../../common/style"
 import { useLogosImages } from "../../common/queries/logos"
 
-const BackgroundAnimation = typeof window !== `undefined` ? require("./BackgroundAnimation").default : () => <div/>
+const BackgroundAnimation =
+  typeof window !== `undefined`
+    ? require("./BackgroundAnimation").default
+    : () => <div />
 
 const Section = styled.div`
   min-height: 100vh;
@@ -39,13 +42,13 @@ const Container = styled.div`
   position: absolute;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  
+  align-items: center;
+
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  
+
   background: linear-gradient(to right, transparent, white, transparent);
 `
 
@@ -54,7 +57,7 @@ export default function() {
 
   return (
     <Section>
-      <BackgroundAnimation/>
+      <BackgroundAnimation />
       <Container>
         <div>
           <Center>
@@ -64,7 +67,7 @@ export default function() {
           </Center>
 
           <Center>
-            <Heading>พบกันเร็วๆนี้ในปี 2020</Heading>
+            <Heading>14-15 พฤศจิกายน 2020</Heading>
           </Center>
           <Center>
             <Content>@Clazy Cafe’ BTS Sanam Pao</Content>
@@ -73,9 +76,7 @@ export default function() {
           <br />
           <br />
           <Center>
-            <DisabledButton big>
-              เปิดรับสมัครเร็วๆนี้
-            </DisabledButton>
+            <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton>
             {/*<LinkButton*/}
             {/*  big*/}
             {/*  href="https://forms.gle/bMLeKDbDTNdGr6ry9"*/}
