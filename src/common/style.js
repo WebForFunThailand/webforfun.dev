@@ -7,6 +7,9 @@ export const GlobalStyle = createGlobalStyle`
     src: url("./fonts/HijoPutaPeligroso.otf") format("opentype");
   }
   
+  p {
+    line-height: 30px;
+  }
   body {
     margin: 0;
     font-size: 16px;
@@ -19,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const fonts = {
   content: "'Sarabun', sans-serif",
-  header: "'Kanit', sans-serif",
+  header: "'Sukhumvit Set', 'Kanit', sans-serif",
   logo: "'HijoPutaPeligroso', sans-serif",
 }
 

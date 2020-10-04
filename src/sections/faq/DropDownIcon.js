@@ -12,7 +12,7 @@ const LeftCross = styled.path`
   stroke: #2c3e50;
   stroke-linecap: round;
   d: path("${({ enable }) =>
-    enable ? "M 50 25 L 90 80" : "M 10 25 L 50 80"}");
+    enable ? "M 20 20 L 80 80" : "M 10 25 L 50 80"}");
   transition: 0.6s;
 `
 
@@ -21,7 +21,7 @@ const RightCross = styled.path`
   stroke: #2c3e50;
   stroke-linecap: round;
   d: path("${({ enable }) =>
-    enable ? "M 50 25 L 10 80" : "M 90 25 L 50 80"}");
+    enable ? "M 80 20 L 20 80" : "M 90 25 L 50 80"}");
   transition: 0.6s;
 `
 

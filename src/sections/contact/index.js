@@ -45,6 +45,13 @@ const WidthContainer = styled.div`
   `}
 `
 
+const ContactItem = styled.div`
+  & > svg {
+    margin-right: 5px;
+    transform: translateY(1px);
+  }
+`
+
 export default function() {
   return (
     <Section>
@@ -63,18 +70,18 @@ export default function() {
                 allowTransparency="true" allow="encrypted-media"/>
             </div>
             <ContactList>
-              <div>
+              <ContactItem>
                 <FontAwesomeIcon icon={faFacebook} /> <Anchor href="https://facebook.com/webforfun" target="_blank">Facebook: Web For Fun</Anchor>
-              </div>
-              <div>
+              </ContactItem>
+              <ContactItem>
                 <FontAwesomeIcon icon={faFacebookMessenger} /> <Anchor href="https://www.facebook.com/messages/t/webforfun" target="_blank">Messenger: Web For Fun</Anchor>
-              </div>
-              <div>
+              </ContactItem>
+              <ContactItem>
                 <FontAwesomeIcon icon={faEnvelope} /> <span>Email: hello@webforfun.dev</span>
-              </div>
-              <div>
+              </ContactItem>
+              <ContactItem>
                 <FontAwesomeIcon icon={faPhone} /> <span>Phone: 093-952-0586 (ชุน), 064-323-3512 (ไอซ์)</span>
-              </div>
+              </ContactItem>
             </ContactList>
           </Grid>
         </WidthContainer>

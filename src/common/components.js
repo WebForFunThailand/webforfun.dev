@@ -28,7 +28,7 @@ export const Heading = styled.h1`
   color: ${props => props.color ? props.color : colors.red};
   font-family: ${fonts.header}; 
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 800;
 `
 
 export const Center = styled.div`
@@ -74,5 +74,10 @@ export const LinkButton = styled.a`
   color: white;
   text-decoration: none;
   font-family: ${fonts.header};
+  transition: 0.3s;
+  
+  &:hover {
+    background: #c0115c;
+  }
 `
 
