@@ -5,12 +5,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import Img from "gatsby-image"
 
-import { Anchor, Center, Container, DisabledButton, LinkButton } from "./components"
+import {
+  Anchor,
+  Center,
+  Container,
+  DisabledButton,
+  LinkButton,
+} from "./components"
 import { media } from "./style"
 import { useLogosImages } from "./queries/logos"
 
 const NavContainer = styled.div`
-  padding: 10px 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
   background: white;
   position: fixed;
   width: 100%;
@@ -19,6 +26,10 @@ const NavContainer = styled.div`
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+
+  @media (hover: none) {
+    padding-top: 15px;
+  }
 `
 
 const FlexContainer = styled(Container)`
@@ -196,9 +207,7 @@ export default function() {
           </Link>
         </AnchorContainer>
         <div>
-          <DisabledButton big>
-            เปิดรับสมัครเร็วๆนี้
-          </DisabledButton>
+          <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton>
           {/*<LinkButton*/}
           {/*  href="https://forms.gle/bMLeKDbDTNdGr6ry9"*/}
           {/*  target="_blank"*/}

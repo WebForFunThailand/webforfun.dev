@@ -23,7 +23,7 @@ const Container = styled.svg`
   position: fixed;
   width: 50px;
   height: 50px;
-  z-index: 1000;
+  z-index: 100000;
   animation-name: ${containerAnimation};
   animation-iteration-count: infinite;
   animation-duration: 6s;
