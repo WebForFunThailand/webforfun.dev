@@ -70,7 +70,6 @@ export default function() {
               <Img fluid={logo.source} />
             </Logo>
           </Center>
-
           <Center>
             <Heading>5 ธันวาคม 2020</Heading>
           </Center>

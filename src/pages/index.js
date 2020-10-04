@@ -15,6 +15,7 @@ import GallerySection from "../sections/gallery"
 import FAQSection from "../sections/faq"
 import SponsorSection from "../sections/sponsor"
 import ContactSection from "../sections/contact"
+import Cursor from "../common/cursor"
 
 const ReviewSection = loadable(() =>
   import(/* webpackChunkName: `ReviewSection` */ "../sections/review")
@@ -26,7 +27,7 @@ const IndexPage = () => (
     <GlobalStyle />
 
     <Navbar />
-
+    <Cursor></Cursor>
     <LandingSection />
     <div id="about" name="about">
       <AboutSection />
