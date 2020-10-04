@@ -28,7 +28,6 @@ const IndexPage = () => (
     <GlobalStyle />
     <ProgressBar></ProgressBar>
     <Navbar />
-    <Cursor></Cursor>
     <LandingSection />
     <div id="about" name="about">
       <AboutSection />

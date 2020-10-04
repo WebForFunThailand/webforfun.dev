@@ -29,10 +29,6 @@ const ProgressBar = styled.div`
   animation-name: ${animation};
   animation-duration: 5s;
   animation-iteration-count: infinite;
-
-  @media (hover: hover) {
-    display: none;
-  }
 `
 
 export default () => {

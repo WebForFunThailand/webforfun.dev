@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -15,6 +15,7 @@ import {
   Section,
 } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
+import { useState } from "react"
 
 const Grid = styled.div`
   display: grid;
@@ -66,7 +67,9 @@ const FacebookFrame = styled.iframe`
 `
 
 export default function() {
+  if (typeof window === "undefined") return null
   const width = Math.min(340, document.body.clientWidth - 30)
+
   return (
     <Section>
       <Container>

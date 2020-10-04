@@ -63,7 +63,7 @@ const ProgressBar = styled.rect`
 
 const ProgressTrack = styled.rect`
   fill: transparent;
-  stroke: transparent;
+  stroke: #ecf0f1;
   stroke-width: 15;
   stroke-dasharray: 400 400;
   stroke-linecap: round;
