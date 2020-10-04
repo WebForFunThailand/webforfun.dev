@@ -7,17 +7,25 @@ export const GlobalStyle = createGlobalStyle`
     src: url("./fonts/HijoPutaPeligroso.otf") format("opentype");
   }
   
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
   p {
     line-height: 30px;
   }
+
   body {
     margin: 0;
     font-size: 16px;
     font-family: sans-serif;
   } 
+
   * {
+    cursor:none; 
     box-sizing: border-box;
   } 
+
 `
 
 export const fonts = {

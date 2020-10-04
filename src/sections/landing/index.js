@@ -49,7 +49,12 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
 
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    white,
+    rgba(255, 255, 255, 0)
+  );
 `
 
 export default function() {
@@ -65,9 +70,8 @@ export default function() {
               <Img fluid={logo.source} />
             </Logo>
           </Center>
-
           <Center>
-            <Heading>14 - 15 พฤศจิกายน 2020</Heading>
+            <Heading>5 ธันวาคม 2020</Heading>
           </Center>
           <Center>
             <Content>@Clazy Cafe’ BTS Sanam Pao</Content>
