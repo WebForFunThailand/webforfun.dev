@@ -2,7 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import { Center, Container, Heading, LinkButton, Section } from "../../common/components"
+import {
+  Center,
+  Container,
+  Heading,
+  LinkButton,
+  Section,
+} from "../../common/components"
 import { useSponsersImages } from "../../common/queries/sponsors"
 
 const SponsorLogo = styled.div`
@@ -16,9 +22,10 @@ const SponsorLogo = styled.div`
   }
 `
 
+const enableSponsorAcceptionButton = false
+
 export default function() {
   const { clazy } = useSponsersImages()
-  console.log(clazy)
 
   return (
     <Section>
@@ -34,18 +41,21 @@ export default function() {
             </SponsorLogo>
           </a>
         </Center>
-
-        <br />
-        <br />
-        <Center>
-          <LinkButton
-            big
-            href="https://docs.google.com/document/d/1G4FotxHMOKJmDVxnIU6Mmak8WHSUSAdWoEuwAC63_V4/edit?usp=sharing"
-            target="_blank"
-          >
-            ร่วมเป็นผู้สนับสนุนกิจกรรม
-          </LinkButton>
-        </Center>
+        {enableSponsorAcceptionButton ? (
+          <>
+            <br />
+            <br />
+            <Center>
+              <LinkButton
+                big
+                href="https://docs.google.com/document/d/1G4FotxHMOKJmDVxnIU6Mmak8WHSUSAdWoEuwAC63_V4/edit?usp=sharing"
+                target="_blank"
+              >
+                ร่วมเป็นผู้สนับสนุนกิจกรรม
+              </LinkButton>
+            </Center>
+          </>
+        ) : null}
       </Container>
     </Section>
   )
