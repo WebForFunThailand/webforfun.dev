@@ -63,11 +63,14 @@ const Hamburger = styled.div`
 `
 
 const Dropdown = styled.div`
+  display: flex;
   position: fixed;
   height: 100vh;
   width: 100vw;
-  left: 0;
-  top: 58px;
+  left: 0px;
+  top: ${({ visible }) => (visible ? "0px" : "-100vh")};
+  opacity: ${({ visible }) => (visible ? 1 : 0)};
+  padding-top: 69px;
 
   text-align: center;
   background: rgba(0, 0, 0, 0.85);
@@ -75,6 +78,8 @@ const Dropdown = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 99998;
+  transition: 0.3s;
 
   & ${Anchor} {
     color: white;
@@ -90,8 +95,8 @@ export default function() {
   const { logo } = useLogosImages()
 
   return (
-    <NavContainer>
-      <Dropdown style={{ display: isOpen ? "flex" : "none" }}>
+    <>
+      <Dropdown visible={isOpen}>
         <div>
           <Link
             onClick={() => setIsOpen(false)}
@@ -155,63 +160,77 @@ export default function() {
           </Link>
         </div>
       </Dropdown>
-      <FlexContainer>
-        <Hamburger onClick={() => setIsOpen(!isOpen)}>
-          <FontAwesomeIcon icon={!isOpen ? faBars : faTimes} />
-        </Hamburger>
-        <AnchorContainer>
+      <NavContainer>
+        <FlexContainer>
+          <Hamburger onClick={() => setIsOpen(!isOpen)}>
+            <FontAwesomeIcon icon={!isOpen ? faBars : faTimes} />
+          </Hamburger>
+          <AnchorContainer>
+            <div>
+              <Logo>
+                <Img fluid={logo.source} />
+              </Logo>
+            </div>
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+            >
+              <Anchor href="#">รายละเอียดงาน</Anchor>
+            </Link>
+            <Link
+              to="venue"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+            >
+              <Anchor href="#">สถานที่จัดงาน</Anchor>
+            </Link>
+            <Link
+              to="gallery"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+            >
+              <Anchor href="#">บรรยากาศปีที่ผ่านมา</Anchor>
+            </Link>
+            <Link to="faq" spy={true} smooth={true} duration={500} offset={-80}>
+              <Anchor href="#">FAQ</Anchor>
+            </Link>
+            <Link
+              to="sponsor"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+            >
+              <Anchor href="#">ผู้สนับสนุน</Anchor>
+            </Link>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-80}
+            >
+              <Anchor href="#">ติดต่อเรา</Anchor>
+            </Link>
+          </AnchorContainer>
           <div>
-            <Logo>
-              <Img fluid={logo.source} />
-            </Logo>
+            <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton>
+            {/*<LinkButton*/}
+            {/*  href="https://forms.gle/bMLeKDbDTNdGr6ry9"*/}
+            {/*  target="_blank"*/}
+            {/*>*/}
+            {/*  สมัครกิจกรรม*/}
+            {/*</LinkButton>*/}
           </div>
-          <Link to="about" spy={true} smooth={true} duration={500} offset={-80}>
-            <Anchor href="#">รายละเอียดงาน</Anchor>
-          </Link>
-          <Link to="venue" spy={true} smooth={true} duration={500} offset={-80}>
-            <Anchor href="#">สถานที่จัดงาน</Anchor>
-          </Link>
-          <Link
-            to="gallery"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-80}
-          >
-            <Anchor href="#">บรรยากาศปีที่ผ่านมา</Anchor>
-          </Link>
-          <Link to="faq" spy={true} smooth={true} duration={500} offset={-80}>
-            <Anchor href="#">FAQ</Anchor>
-          </Link>
-          <Link
-            to="sponsor"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-80}
-          >
-            <Anchor href="#">ผู้สนับสนุน</Anchor>
-          </Link>
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-80}
-          >
-            <Anchor href="#">ติดต่อเรา</Anchor>
-          </Link>
-        </AnchorContainer>
-        <div>
-          <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton>
-          {/*<LinkButton*/}
-          {/*  href="https://forms.gle/bMLeKDbDTNdGr6ry9"*/}
-          {/*  target="_blank"*/}
-          {/*>*/}
-          {/*  สมัครกิจกรรม*/}
-          {/*</LinkButton>*/}
-        </div>
-      </FlexContainer>
-    </NavContainer>
+        </FlexContainer>
+      </NavContainer>
+    </>
   )
 }
