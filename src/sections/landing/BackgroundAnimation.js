@@ -15,6 +15,9 @@ export default () => {
   useEffect(() => {
     if (typeof window !== `undefined`) {
       const { height, width } = parentRef.current.getBoundingClientRect()
+      console.log(
+        `animation canvas's size (height, width) : (${height}, ${width})`
+      )
       const updateScreenResolution = () => {
         setScreenHeight(height)
         setScreenWidth(width)

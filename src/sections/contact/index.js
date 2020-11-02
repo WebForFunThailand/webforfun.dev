@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -7,30 +7,34 @@ import {
   faFacebookMessenger,
 } from "@fortawesome/free-brands-svg-icons"
 
-import {
-  Anchor,
-  Center,
-  Container,
-  Heading,
-  Section,
-} from "../../common/components"
+import { Center, Container, Heading, Section } from "../../common/components"
 import { colors, fonts, media } from "../../common/style"
-import { useState } from "react"
 
 const Grid = styled.div`
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: max-content max-content max-content;
 
   ${media.tablet`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    & > div:nth-child(2){
+      display: none;
+    }
     
     & > div:nth-child(1) {
       margin-bottom: 30px; 
     }
   `}
+`
+
+const VerticleLine = styled.div`
+  height: 100%;
+  width: 4px;
+  border-radius: 2px;
+  background-color: #555;
 `
 
 const ContactList = styled.div`
@@ -47,7 +51,8 @@ const ContactList = styled.div`
 `
 
 const WidthContainer = styled.div`
-  width: 80%;
+  width: max-content;
+  max-width: 100%;
   margin: auto auto;
 
   ${media.tablet`
@@ -64,6 +69,20 @@ const ContactItem = styled.div`
 
 const FacebookFrame = styled.iframe`
   max-width: 340px;
+  border-radius: 5px;
+`
+
+export const Anchor = styled.a`
+  font-family: ${fonts.header};
+  color: #555;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    color: black;
+  }
 `
 
 export default function() {
@@ -89,29 +108,43 @@ export default function() {
               allowTransparency="true"
               allow="encrypted-media"
             />
+            <VerticleLine></VerticleLine>
             <ContactList>
               <ContactItem>
-                <FontAwesomeIcon icon={faFacebook} />{" "}
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  style={{ color: "#2d3436" }}
+                />{" "}
                 <Anchor href="https://facebook.com/webforfun" target="_blank">
-                  Facebook: Web For Fun
+                  Web For Fun
                 </Anchor>
               </ContactItem>
               <ContactItem>
-                <FontAwesomeIcon icon={faFacebookMessenger} />{" "}
+                <FontAwesomeIcon
+                  icon={faFacebookMessenger}
+                  style={{ color: "#2d3436" }}
+                />{" "}
                 <Anchor
                   href="https://www.facebook.com/messages/t/webforfun"
                   target="_blank"
                 >
-                  Messenger: Web For Fun
+                  Web For Fun
                 </Anchor>
               </ContactItem>
               <ContactItem>
-                <FontAwesomeIcon icon={faEnvelope} />{" "}
-                <span>Email: hello@webforfun.dev</span>
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  style={{ color: "#2d3436" }}
+                />{" "}
+                <Anchor href="mailto:hello@webforfun.dev" target="_blank">
+                  hello@webforfun.dev
+                </Anchor>
               </ContactItem>
               <ContactItem>
-                <FontAwesomeIcon icon={faPhone} />{" "}
-                <span>Phone: 093-952-0586 (ชุน), 064-323-3512 (ไอซ์)</span>
+                <FontAwesomeIcon icon={faPhone} style={{ color: "#2d3436" }} />{" "}
+                <Anchor href="tel:093-952-0586" target="_blank">
+                  093-952-0586 (ชุน), 064-323-3512 (ไอซ์)
+                </Anchor>
               </ContactItem>
             </ContactList>
           </Grid>
