@@ -15,6 +15,9 @@ const ModalBox = styled.div`
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
+  opacity: ${({ visible }) => (visible ? 1 : 0)};
+  pointer-events: ${({ visible }) => (visible ? "unset" : "none")};
+  transition: 0.3s;
   // background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 `
@@ -67,14 +70,14 @@ export default function(props) {
       <Image onClick={() => setIsOpen(!isOpen)}>
         <Img fluid={props.src} />
       </Image>
-      {isOpen && (
-        <ModalBox>
-          <Close onClick={() => setIsOpen(!isOpen)}>&times;</Close>
-          <ModalContent>
-            <Img fluid={props.src} />
-          </ModalContent>
-        </ModalBox>
-      )}
+      {/* {isOpen && ( */}
+      <ModalBox visible={isOpen}>
+        <Close onClick={() => setIsOpen(!isOpen)}>&times;</Close>
+        <ModalContent>
+          <Img fluid={props.src} />
+        </ModalContent>
+      </ModalBox>
+      {/* )} */}
     </div>
   )
 }
