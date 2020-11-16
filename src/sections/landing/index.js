@@ -71,7 +71,7 @@ export default function() {
             </Logo>
           </Center>
           <Center>
-            <Heading>5 ธันวาคม 2020</Heading>
+            <Heading>16 - 17 มกราคม 2021</Heading>
           </Center>
           <Center>
             <Content>@Clazy Cafe’ BTS Sanam Pao</Content>
