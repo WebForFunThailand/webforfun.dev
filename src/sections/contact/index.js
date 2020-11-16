@@ -45,7 +45,7 @@ const ContactList = styled.div`
     margin-bottom: 10px;
   }
 
-  & ${Anchor} {
+  & a {
     color: black !important;
   }
 `
