@@ -25,6 +25,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   } 
 
+  #defaultCanvas0 { 
+    display: none !important; 
+  }
+
 `
 
 export const fonts = {

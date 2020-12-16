@@ -14,10 +14,11 @@ export default () => {
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
-      const { height, width } = parentRef.current.getBoundingClientRect()
+      let { height, width } = parentRef.current.getBoundingClientRect()
       console.log(
         `animation canvas's size (height, width) : (${height}, ${width})`
       )
+
       const updateScreenResolution = () => {
         setScreenHeight(height)
         setScreenWidth(width)
@@ -105,11 +106,13 @@ export default () => {
   }
 
   return (
-    <div
-      ref={parentRef}
-      style={{ width: "100%", height: "100vh", overflow: "hidden" }}
-    >
-      {loading ? null : <Sketch setup={setup} draw={draw} />}
+    <div>
+      <div
+        ref={parentRef}
+        style={{ width: "100vw", height: "100vh", overflow: "hidden" }}
+      >
+        {loading ? null : <Sketch setup={setup} draw={draw} />}
+      </div>
     </div>
   )
 }
