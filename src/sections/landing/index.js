@@ -2,7 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import { Center, DisabledButton, Heading } from "../../common/components"
+import {
+  Center,
+  DisabledButton,
+  Heading,
+  LinkButton,
+} from "../../common/components"
 import { fonts, media } from "../../common/style"
 import { useLogosImages } from "../../common/queries/logos"
 
@@ -80,19 +85,21 @@ export default function() {
           <br />
           <br />
           <Center>
-            <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton>
-            {/*<LinkButton*/}
-            {/*  big*/}
-            {/*  href="https://forms.gle/bMLeKDbDTNdGr6ry9"*/}
-            {/*  target="_blank"*/}
-            {/*>*/}
-            {/*  สมัครเข้าร่วมกิจกรรม*/}
-            {/*</LinkButton>*/}
+            {/* <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton> */}
+            <LinkButton
+              big
+              href="https://bit.ly/webforfun-register"
+              target="_blank"
+            >
+              สมัครเข้าร่วมกิจกรรม
+            </LinkButton>
           </Center>
-          {/*<br/>*/}
-          {/*<Center>*/}
-          {/*  <P>ปิดรับสมัครผู้เข้าร่วมกิจกรรมวันที่ 15 เมษายน 2563</P>*/}
-          {/*</Center>*/}
+          <br />
+          <Center>
+            <p style={{ color: "#555555" }}>
+              ปิดรับสมัครผู้เข้าร่วมกิจกรรมวันที่ 9 มกราคม 2564
+            </p>
+          </Center>
         </div>
       </Container>
     </Section>

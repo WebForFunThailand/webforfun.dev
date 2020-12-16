@@ -43,7 +43,7 @@ const AnchorContainer = styled.div`
   }
 
   ${media.tablet`
-    display: none
+    display: none;
   `}
 `
 
@@ -221,13 +221,13 @@ export default function() {
             </Link>
           </AnchorContainer>
           <div>
-            <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton>
-            {/*<LinkButton*/}
-            {/*  href="https://forms.gle/bMLeKDbDTNdGr6ry9"*/}
-            {/*  target="_blank"*/}
-            {/*>*/}
-            {/*  สมัครกิจกรรม*/}
-            {/*</LinkButton>*/}
+            {/* <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton> */}
+            <LinkButton
+              href="https://bit.ly/webforfun-register"
+              target="_blank"
+            >
+              สมัครกิจกรรม
+            </LinkButton>
           </div>
         </FlexContainer>
       </NavContainer>
