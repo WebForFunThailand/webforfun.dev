@@ -9,23 +9,40 @@ import {
   LinkButton,
   Section,
 } from "../../common/components"
+import { media } from "../../common/style"
 import { useSponsersImages } from "../../common/queries/sponsors"
 
 const SponsorLogo = styled.div`
   opacity: 0.8;
   transition: 0.3s;
-  width: 165px;
-  height: 80px;
 
   &:hover {
     opacity: 1;
   }
 `
 
+const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & ${SponsorLogo} {
+    margin: 0 15px;
+  }
+
+  ${media.tablet`
+    flex-direction: column;
+
+    & ${SponsorLogo} {
+      margin: 15px 0;
+    }
+  `}
+`
+
 const enableSponsorAcceptionButton = false
 
 export default function() {
-  const { clazy } = useSponsersImages()
+  const { clazy, cleverse, dev_community } = useSponsersImages()
 
   return (
     <Section>
@@ -34,13 +51,21 @@ export default function() {
           <Heading>ผู้สนับสนุน</Heading>
         </Center>
 
-        <Center>
+        <LogoContainer>
+          <a href="https://cleverse.com/" target="_blank">
+            <SponsorLogo style={{ width: 180 }}>
+              <Img fluid={cleverse.source} />
+            </SponsorLogo>
+          </a>
           <a href="https://www.facebook.com/ClazyCommunity/" target="_blank">
-            <SponsorLogo>
+            <SponsorLogo style={{ width: 140 }}>
               <Img fluid={clazy.source} />
             </SponsorLogo>
           </a>
-        </Center>
+          <SponsorLogo style={{ width: 210 }}>
+            <Img fluid={dev_community.source} />
+          </SponsorLogo>
+        </LogoContainer>
         {enableSponsorAcceptionButton ? (
           <>
             <br />
