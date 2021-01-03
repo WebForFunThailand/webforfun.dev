@@ -76,7 +76,7 @@ export default function() {
             </Logo>
           </Center>
           <Center>
-            <Heading>16 - 17 มกราคม 2021</Heading>
+            <Heading>Web For Fun #2</Heading>
           </Center>
           <Center>
             <Content>@Clazy Cafe’ BTS Sanam Pao</Content>
@@ -85,21 +85,21 @@ export default function() {
           <br />
           <br />
           <Center>
-            {/* <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton> */}
-            <LinkButton
+            <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton>
+            {/* <LinkButton
               big
               href="https://bit.ly/webforfun-register"
               target="_blank"
             >
               สมัครเข้าร่วมกิจกรรม
-            </LinkButton>
+            </LinkButton> */}
           </Center>
-          <br />
+          {/* <br />
           <Center>
             <p style={{ color: "#555555" }}>
               ปิดรับสมัครผู้เข้าร่วมกิจกรรมวันที่ 9 มกราคม 2564
             </p>
-          </Center>
+          </Center> */}
         </div>
       </Container>
     </Section>

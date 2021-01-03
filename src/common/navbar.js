@@ -221,13 +221,13 @@ export default function() {
             </Link>
           </AnchorContainer>
           <div>
-            {/* <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton> */}
-            <LinkButton
+            <DisabledButton big>เปิดรับสมัครเร็วๆนี้</DisabledButton>
+            {/* <LinkButton
               href="https://bit.ly/webforfun-register"
               target="_blank"
             >
               สมัครกิจกรรม
-            </LinkButton>
+            </LinkButton> */}
           </div>
         </FlexContainer>
       </NavContainer>
